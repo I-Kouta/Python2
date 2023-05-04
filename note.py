@@ -1,5 +1,6 @@
 # 算数・数学
 import sympy
+import math
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -43,4 +44,9 @@ print(sympy.integrate(log(x)), "\n")  # x*log(x) - x
 pi = Fraction(3.14159265359)
 e = Fraction(2.71828182846)
 print(pi.limit_denominator(100))  # 分母がこの値以下の分数を返す
-print(e.limit_denominator(1000))  # 分母がこの値以下の分数を返す
+print(e.limit_denominator(1000), "\n")  # 分母がこの値以下の分数を返す
+
+lcm = math.lcm(4, 6, 5)
+gcd = math.gcd(4, 6, 5)
+print(f"最小公倍数は{lcm}")
+print(f"最大公約数は{gcd}")
