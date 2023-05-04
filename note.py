@@ -1,6 +1,7 @@
 # 算数・数学
 import sympy
 from sympy import sin, cos, tan, log
+from fractions import Fraction
 
 x = sympy.Symbol("x")  # sympy.Symbol()で定義
 y = sympy.Symbol("y")
@@ -37,4 +38,9 @@ print(sympy.integrate(sin(x)))  # -cos(x)
 print(sympy.integrate(cos(x)))  # sin(x)
 print(sympy.integrate(tan(x)))  # -log(cos(x))
 print(sympy.integrate(sympy.exp(x)))  # exp(x)
-print(sympy.integrate(log(x)))  # x*log(x) - x
+print(sympy.integrate(log(x)), "\n")  # x*log(x) - x
+
+pi = Fraction(3.14159265359)
+e = Fraction(2.71828182846)
+print(pi.limit_denominator(100))  # 分母がこの値以下の分数を返す
+print(e.limit_denominator(1000))  # 分母がこの値以下の分数を返す
