@@ -53,3 +53,5 @@ print(f"最大公約数は{gcd}", "\n")
 
 factorial = 4
 print(f"{factorial}! = {math.factorial(factorial)}")  # math.factorial(階乗のメソッド)
+print(f"n個からk個選んで並べる,いわゆるP:{math.perm(4, 2)}")
+print(f"n個からk個選ぶ,いわゆるC:{math.comb(4, 2)}")
