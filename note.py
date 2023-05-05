@@ -64,4 +64,9 @@ for v in itertools.permutations(l, 2):
 v = "arc"
 v_list = list(itertools.permutations(v, 2))
 print(v_list)  # lから2つを取得するのは同じ
-print(len(v_list))
+print(len(v_list), "\n")
+
+Pi = math.pi  # 円周率
+print(Pi)
+print(math.degrees(Pi))  # ラジアン(弧度法)→度に変換
+print(math.radians(180))  # 度→ラジアンに変換
