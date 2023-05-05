@@ -68,5 +68,9 @@ print(len(v_list), "\n")
 
 Pi = math.pi  # 円周率
 print(Pi)
-print(math.degrees(Pi))  # ラジアン(弧度法)→度に変換
-print(math.radians(180))  # 度→ラジアンに変換
+print(math.degrees(Pi))  # ラジアン(弧度法)→度に変換(180.0)
+print(math.radians(180))  # 度→ラジアンに変換(3.14…)
+
+arc = math.radians(45)  # π/4
+print(math.sin(arc))  # 0.7071…
+print(math.cos(arc))
