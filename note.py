@@ -1,6 +1,7 @@
 # 算数・数学
 import sympy
 import math
+import itertools
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -54,4 +55,12 @@ print(f"最大公約数は{gcd}", "\n")
 factorial = 4
 print(f"{factorial}! = {math.factorial(factorial)}")  # math.factorial(階乗のメソッド)
 print(f"n個からk個選んで並べる,いわゆるP:{math.perm(4, 2)}")
-print(f"n個からk個選ぶ,いわゆるC:{math.comb(4, 2)}")
+print(f"n個からk個選ぶ,いわゆるC:{math.comb(4, 2)}", "\n")
+
+l = ["a", "b", "c", "d"]
+for v in itertools.permutations(l, 2):
+    print(v)
+
+v_list = list(itertools.permutations(l, 2))
+print(v_list)  # lから2つを取得するのは同じ
+print(len(v_list))
