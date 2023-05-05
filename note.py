@@ -71,6 +71,14 @@ print(Pi)
 print(math.degrees(Pi))  # ラジアン(弧度法)→度に変換(180.0)
 print(math.radians(180))  # 度→ラジアンに変換(3.14…)
 
-arc = math.radians(45)  # π/4
-print(math.sin(arc))  # 0.7071…
-print(math.cos(arc))
+radian45 = math.radians(45)  # π/4
+print(math.sin(radian45))  # 0.7071…
+print(math.cos(radian45))
+print(math.tan(radian45), "\n")  # 約1
+
+sin30 = math.asin(0.5)
+cos60 = math.acos(0.5)
+tan45 = math.atan(1)
+print(math.degrees(sin30))  # 約30
+print(math.degrees(cos60))  # 約60
+print(math.degrees(tan45))  # 45
