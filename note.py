@@ -61,6 +61,7 @@ l = ["a", "b", "c", "d"]
 for v in itertools.permutations(l, 2):
     print(v)
 
-v_list = list(itertools.permutations(l, 2))
+v = "arc"
+v_list = list(itertools.permutations(v, 2))
 print(v_list)  # lから2つを取得するのは同じ
 print(len(v_list))
