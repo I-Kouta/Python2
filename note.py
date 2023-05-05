@@ -49,4 +49,7 @@ print(e.limit_denominator(1000), "\n")  # 分母がこの値以下の分数を�
 lcm = math.lcm(4, 6, 5)
 gcd = math.gcd(4, 6, 5)
 print(f"最小公倍数は{lcm}")
-print(f"最大公約数は{gcd}")
+print(f"最大公約数は{gcd}", "\n")
+
+factorial = 4
+print(f"{factorial}! = {math.factorial(factorial)}")  # math.factorial(階乗のメソッド)
