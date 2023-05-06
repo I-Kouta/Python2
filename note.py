@@ -86,3 +86,5 @@ print(math.degrees(tan45), "\n")  # 45
 print(math.e)  # 自然対数
 print(pow(3, 4))
 print(math.pow(2, 10))  # どちらも**べき乗と同様
+print(pow(2, 4, 5), "\n")  # (x ** y) % zと同様
+print(math.sqrt(2))  # **0.5と同様
