@@ -88,3 +88,7 @@ print(pow(3, 4))
 print(math.pow(2, 10))  # どちらも**べき乗と同様
 print(pow(2, 4, 5), "\n")  # (x ** y) % zと同様
 print(math.sqrt(2))  # **0.5と同様
+print(math.exp(2))  # 自然対数の累乗
+print(math.log(25, 5))  # (x, y)→yを底としたxの対数
+print(math.log10(10))  # 10を底としたxの対数(常用対数)
+print(math.log2(1024))  # 2を底としたxの対数(二進対数)
