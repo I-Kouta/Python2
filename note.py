@@ -81,4 +81,8 @@ cos60 = math.acos(0.5)
 tan45 = math.atan(1)
 print(math.degrees(sin30))  # 約30
 print(math.degrees(cos60))  # 約60
-print(math.degrees(tan45))  # 45
+print(math.degrees(tan45), "\n")  # 45
+
+print(math.e)  # 自然対数
+print(pow(3, 4))
+print(math.pow(2, 10))  # どちらも**べき乗と同様
