@@ -1,6 +1,7 @@
 # 算数・数学
 import sympy
 import math
+import cmath
 import itertools
 from sympy import sin, cos, tan, log
 from fractions import Fraction
@@ -93,9 +94,13 @@ print(math.log(25, 5))  # (x, y)→yを底としたxの対数
 print(math.log10(10))  # 10を底としたxの対数(常用対数)
 print(math.log2(1024), "\n")  # 2を底としたxの対数(二進対数)
 
-c = 3 + 4j
+c = 1 + 2j
 print(c)
 print(f"実部:{c.real}")
 print(f"虚部:{c.imag}")
 print(f"共役:{c.conjugate()}")
-print(f"絶対値:{abs(c)}")
+print(f"絶対値:{abs(c)}, \n")
+
+print(math.atan2(c.imag, c.real))
+print(cmath.phase(c))  # どちらも同じ
+print(math.degrees(cmath.phase(c)))  # 角度を取得
