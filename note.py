@@ -91,4 +91,11 @@ print(math.sqrt(2))  # **0.5と同様
 print(math.exp(2))  # 自然対数の累乗
 print(math.log(25, 5))  # (x, y)→yを底としたxの対数
 print(math.log10(10))  # 10を底としたxの対数(常用対数)
-print(math.log2(1024))  # 2を底としたxの対数(二進対数)
+print(math.log2(1024), "\n")  # 2を底としたxの対数(二進対数)
+
+c = 3 + 4j
+print(c)
+print(f"実部:{c.real}")
+print(f"虚部:{c.imag}")
+print(f"共役:{c.conjugate()}")
+print(f"絶対値:{abs(c)}")
