@@ -104,3 +104,4 @@ print(f"絶対値:{abs(c)}, \n")
 print(math.atan2(c.imag, c.real))
 print(cmath.phase(c))  # どちらも同じ
 print(math.degrees(cmath.phase(c)))  # 角度を取得
+print(f"(絶対値, 偏角) = {cmath.polar(c)}")
