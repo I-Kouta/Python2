@@ -3,6 +3,7 @@ import sympy
 import math
 import cmath
 import itertools
+import statistics
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -104,4 +105,9 @@ print(f"絶対値:{abs(c)}, \n")
 print(math.atan2(c.imag, c.real))
 print(cmath.phase(c))  # どちらも同じ
 print(math.degrees(cmath.phase(c)))  # 角度を取得
-print(f"(絶対値, 偏角) = {cmath.polar(c)}")
+print(f"(絶対値, 偏角) = {cmath.polar(c)}, \n")
+
+m = [10, 1, 3, 7, 1]
+print(f"平均:{statistics.mean(m)}")
+print(f"調和平均:{statistics.harmonic_mean(m)}")  # 逆数の平均の逆数
+print(f"最頻値:{statistics.mode(m)}")
