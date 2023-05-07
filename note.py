@@ -111,3 +111,7 @@ m = [10, 1, 3, 7, 1]
 print(f"平均:{statistics.mean(m)}")
 print(f"調和平均:{statistics.harmonic_mean(m)}")  # 逆数の平均の逆数
 print(f"最頻値:{statistics.mode(m)}")
+print(f"母分散:{statistics.pvariance(m)}")  # 個々のデータが平均からどれくらい離れているか,データと平均の差を数で割る
+print(f"標準偏差:{statistics.pstdev(m)}")  # 母分散の平方根
+print(f"不偏分散:{statistics.variance(m)}")
+print(f"標本標準偏差:{statistics.stdev(m)}")  # 不偏分散の平方根
