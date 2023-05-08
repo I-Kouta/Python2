@@ -105,7 +105,7 @@ print(f"絶対値:{abs(c)}, \n")
 print(math.atan2(c.imag, c.real))
 print(cmath.phase(c))  # どちらも同じ
 print(math.degrees(cmath.phase(c)))  # 角度を取得
-print(f"(絶対値, 偏角) = {cmath.polar(c)}, \n")
+print(f"(絶対値, 偏角) = {cmath.polar(c)} \n")
 
 m = [10, 1, 3, 7, 1]
 print(f"平均:{statistics.mean(m)}")
@@ -114,4 +114,25 @@ print(f"最頻値:{statistics.mode(m)}")
 print(f"母分散:{statistics.pvariance(m)}")  # 個々のデータが平均からどれくらい離れているか,データと平均の差を数で割る
 print(f"標準偏差:{statistics.pstdev(m)}")  # 母分散の平方根
 print(f"不偏分散:{statistics.variance(m)}")
-print(f"標本標準偏差:{statistics.stdev(m)}")  # 不偏分散の平方根
+print(f"標本標準偏差:{statistics.stdev(m)} \n")  # 不偏分散の平方根
+# 素因数分解
+
+
+def prime_factorize(n):
+    a = []
+    while n % 2 == 0:  # 偶数の場合,配列に2を加えて値を2で割る
+        a.append(2)
+        n //= 2
+    f = 3
+    while f ** 2 <= n:  # 与えられた値が9以下の場合
+        if n % f == 0:  # 3の倍数の場合,3を加えて値を3で割る
+            a.append(f)
+            n //= f
+        else:
+            f += 2  # 3の倍数でなければ3に2を足す
+    if n != 1:
+        a.append(n)
+    return a
+
+
+print(prime_factorize(1024))
