@@ -4,6 +4,7 @@ import math
 import cmath
 import itertools
 import statistics
+import collections
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -135,4 +136,7 @@ def prime_factorize(n):
     return a
 
 
-print(prime_factorize(1024))
+print(prime_factorize(1024), "\n")
+
+c = collections.Counter(prime_factorize(84))
+print(c.items())  # 値と個数を取得
