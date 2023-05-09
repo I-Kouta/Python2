@@ -45,13 +45,6 @@ if can_rearrange_to_t(s, t):
 else:
     print("no")
 print("\n")
-# 整数a, bの積が偶数か奇数かを識別→3 3のように入力
-a, b = map(int, input().split())
-if (a * b) % 2 == 0:
-    print("even")
-else:
-    print("odd")
-print("\n")
 # 二分探索アルゴリズム
 
 

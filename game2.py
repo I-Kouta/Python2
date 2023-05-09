@@ -142,3 +142,9 @@ result = gcd(numA, numB)
 lcm = (numA*numB) // result
 print(f"{numA}と{numB}の最大公約数は{result}です")
 print(f"{numA}と{numB}の最小公倍数は{lcm}です")
+# 整数a, bの積が偶数か奇数かを識別→3 3のように入力
+a, b = map(int, input().split())
+if (a * b) % 2 == 0:
+    print("even")
+else:
+    print("odd")
