@@ -1,6 +1,7 @@
 # コサイン類似度
 import spacy
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('ja_ginza')
 doc1 = nlp("ホントウのキミを知りたいの")
 doc2 = nlp("ホントウのキミが知りたいの")
 doc3 = nlp("僕らはそうマワルカガミ")
