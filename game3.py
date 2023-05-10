@@ -66,4 +66,19 @@ data = [10, 34, 43, 21, 98, 32]
 dataX = 98
 array = sorted(data)  # [10, 21, 32, 34, 43, 98]
 searchResult = binary_search(array, dataX)
-print(searchResult)
+print(searchResult, "\n")
+# クイックソートアルゴリズム
+
+
+def quickosrt(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quickosrt(left) + middle + quickosrt(right)
+
+
+quickResult = quickosrt([10, 21, 32, 34, 43, 98])
+print(quickResult)
