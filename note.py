@@ -5,6 +5,7 @@ import cmath
 import itertools
 import statistics
 import collections
+import random
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -139,4 +140,11 @@ def prime_factorize(n):
 print(prime_factorize(1024), "\n")
 
 c = collections.Counter(prime_factorize(84))
-print(c.items())  # 値と個数を取得
+print(c.items())  # 素因数分解の値と個数を取得
+
+
+def random_range(start, end):  # ランダムな値を出力
+    return random.sample(range(start, end+1), 3)
+
+
+print(random_range(1, 100))
