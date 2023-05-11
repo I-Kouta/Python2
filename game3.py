@@ -1,6 +1,6 @@
-# 階乗を行う
 import locale
 import unicodedata
+import heapq
 locale.setlocale(locale.LC_COLLATE, 'ja_JP.UTF-8')
 
 
@@ -81,4 +81,5 @@ def quicksort(arr):
 
 
 quicksortResult = quicksort([10, 21, 32, 34, 43, 98])
-print(quicksortResult)
+print(quicksortResult, "\n")
+# ダイクストラアルゴリズム
