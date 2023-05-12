@@ -83,3 +83,27 @@ def quicksort(arr):
 quicksortResult = quicksort([10, 21, 32, 34, 43, 98])
 print(quicksortResult, "\n")
 # ダイクストラアルゴリズム
+
+
+def dijkstra(edges, start, end):
+    graph = {}
+    for a, b, cost in edges:
+        if a not in graph:
+            graph[a] = {}
+        if b not in graph:
+            graph[b] = {}
+        graph[a][b] = cost
+        graph[b][a] = cost
+
+    heap = [0, start]
+    visited = set()
+    while heap:
+        (cost, node) = heapq.heappop(heap)
+        if node not in visited:
+            visited.add(node)
+            if node == end:
+                return cost
+            for next_node in graph[node]:
+                if next_node not in visited:
+                    heapq.heappush(heap, (cost + graph[node][next_node], next_node))
+    return -1
