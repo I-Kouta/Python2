@@ -95,7 +95,7 @@ def dijkstra(edges, start, end):
         graph[a][b] = cost
         graph[b][a] = cost
 
-    heap = [0, start]
+    heap = [(0, start)]
     visited = set()
     while heap:
         (cost, node) = heapq.heappop(heap)
@@ -107,3 +107,9 @@ def dijkstra(edges, start, end):
                 if next_node not in visited:
                     heapq.heappush(heap, (cost + graph[node][next_node], next_node))
     return -1
+
+
+edges = [(1, 2, 1), (2, 3, 2), (1, 3, 4)]
+start = 1
+end = 3
+print(dijkstra(edges, start, end))
