@@ -87,7 +87,7 @@ print(quicksortResult, "\n")
 
 def dijkstra(edges, start, end):
     graph = {}
-    for a, b, cost in edges:
+    for a, b, cost in edges:  # aに始点, bに終点, cにコスト
         if a not in graph:
             graph[a] = {}
         if b not in graph:
@@ -109,7 +109,7 @@ def dijkstra(edges, start, end):
     return -1
 
 
-edges = [(1, 2, 1), (2, 3, 2), (1, 3, 4)]
+edges = [(1, 2, 1), (2, 3, 2), (3, 1, 4)]  # 始点, 終点, コスト
 start = 1
 end = 3
 print(dijkstra(edges, start, end))
