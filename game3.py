@@ -109,7 +109,7 @@ def dijkstra(edges, start, end):
     return -1
 
 
-edges = [(1, 2, 1), (2, 3, 2), (3, 1, 4)]  # 始点, 終点, コスト
+edges = [(1, 2, 7), (1, 3, 4), (1, 4, 3), (2, 3, 1), (2, 5, 2), (3, 5, 6), (4, 5, 5)]  # 始点, 終点, コスト
 start = 1
-end = 3
+end = 5
 print(dijkstra(edges, start, end))
