@@ -113,4 +113,19 @@ def dijkstra(edges, start, end):
 edges = [(1, 2, 7), (1, 3, 4), (1, 4, 3), (2, 3, 1), (2, 5, 2), (3, 5, 6), (4, 5, 5)]  # 始点, 終点, コスト
 start = 1
 end = 5
-print(dijkstra(edges, start, end))
+print(dijkstra(edges, start, end), "\n")
+
+# 演算子の違い
+a = [1, 2, 3]
+b = a
+a = a + [4]
+print(a)  # [1, 2, 3, 4]
+print(b)  # [1, 2, 3]
+
+print("\n")
+
+c = [1, 2, 3]
+d = c
+c += [4]
+print(c)  # [1, 2, 3, 4]
+print(d)  # [1, 2, 3, 4]
