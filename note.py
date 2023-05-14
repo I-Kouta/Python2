@@ -149,3 +149,15 @@ def random_range(start, end):  # ランダムな値を出力
 
 
 print(random_range(1, 100), "\n")
+
+matrixA = np.array([[1, 2], [3, 4]])
+matrixB = np.array([[5, 6], [7, 8]])
+
+print(f"行列の和:{matrixA + matrixB}")
+print(f"行列の差:{matrixA - matrixB}")
+print(f"行列の積:{np.dot(matrixA,  matrixB)}")  # [19 22] [43 50]
+# 内積によって計算
+# 19 = 1 * 5 + 2 * 7
+# 22 = 1 * 6 + 2 * 8
+# 43 = 3 * 5 + 4 * 7
+# 50 = 3 * 6 + 4 * 8
