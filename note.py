@@ -6,6 +6,7 @@ import itertools
 import statistics
 import collections
 import random
+import numpy as np
 from sympy import sin, cos, tan, log
 from fractions import Fraction
 
@@ -147,4 +148,4 @@ def random_range(start, end):  # ランダムな値を出力
     return random.sample(range(start, end+1), 3)
 
 
-print(random_range(1, 100))
+print(random_range(1, 100), "\n")
