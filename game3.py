@@ -154,3 +154,17 @@ n = 3
 opt_val = knapsack(W, wt, val, n)
 print(f"最適な書価値の合計:{opt_val}")
 # ハッシュマップ
+
+
+def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        if target - num in seen:
+            return [seen[target - num], i]
+        seen[num] = i
+    return []
+
+
+nums = [1, 2, 3, 4, 5, 5, 6, 7]
+target = 9
+print(two_sum(nums, target))
