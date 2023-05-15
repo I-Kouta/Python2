@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(-10, 10, 100)  # xの範囲を設定
+x = np.linspace(-5, 5, 100)  # xの範囲を設定
 y1 = x**2 - 1
 y2 = -x**2 + 1
 
