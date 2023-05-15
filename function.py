@@ -4,5 +4,5 @@ from sympy import Symbol, integrate
 
 # 関数の定義
 x = Symbol("x")
-f1 = x**2 - 6*x - 5
-f2 = -x**2 + 3*x - 2
+f1 = x**2 - 1
+f2 = -x**2 + 1
