@@ -6,3 +6,15 @@ from sympy import Symbol, integrate
 x = Symbol("x")
 f1 = x**2 - 1
 f2 = -x**2 + 1
+
+
+def enclosed_area(a, b):
+    area = integrate(f2 - f1, (x, a, b))
+    return area
+
+
+# 面積の計算
+a = 1
+b = -1
+enclosed_area(a, b)
+print(f"面積:{abs(enclosed_area(a, b))}")
