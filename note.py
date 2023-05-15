@@ -9,6 +9,8 @@ import random
 import numpy as np
 from sympy import sin, cos, tan, log
 from fractions import Fraction
+from scipy.integrate import odeint
+import matplotlib.pyplot as plt
 
 x = sympy.Symbol("x")  # sympy.Symbol()で定義
 y = sympy.Symbol("y")
@@ -161,3 +163,20 @@ print(f"行列の積:{np.dot(matrixA,  matrixB)}")  # [19 22] [43 50]
 # 22 = 1 * 6 + 2 * 8
 # 43 = 3 * 5 + 4 * 7
 # 50 = 3 * 6 + 4 * 8
+print("\n")
+# 微分方程式
+
+
+def model(y, t):
+    dydt = -y + 1.0
+    return dydt
+
+
+y0 = 0  # 初期値
+t = np.linspace(0, 5)  # 時間
+y = odeint(model, y0, t)
+# 結果のプロット
+plt.plot(t, y)
+plt.xlabel("time")
+plt.ylabel("y")
+plt.show()
