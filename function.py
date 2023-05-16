@@ -1,5 +1,6 @@
 # 関数で解く
 from sympy import Symbol, integrate, solve
+from fractions import Fraction
 # 二次関数で囲まれた面積を求める
 
 # 関数の定義
@@ -18,4 +19,5 @@ def enclosed_area():
 
 
 print(f"交点(x座標):{solve(f1 - f2, x)}")
-print(f"面積:{abs(enclosed_area())}")
+graphArea = Fraction(str(abs(enclosed_area()))).limit_denominator(100)  # 文字列型にしてから分数にする
+print(f"面積:{graphArea}")
