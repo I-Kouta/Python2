@@ -5,8 +5,8 @@ from fractions import Fraction
 
 # 関数の定義
 x = Symbol("x")
-f1 = x**2 - 1
-f2 = -x**2 + 1
+f1 = -x**2 + 1
+f2 = x**2 - 1
 
 
 def enclosed_area():
@@ -19,5 +19,9 @@ def enclosed_area():
 
 
 print(f"交点(x座標):{solve(f1 - f2, x)}")
-graphArea = Fraction(str(abs(enclosed_area()))).limit_denominator(100)  # 文字列型にしてから分数にする
-print(f"面積:{graphArea}")
+print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
+
+process1 = abs(enclosed_area())  # 絶対値に変換
+process2 = str(process1)  # 文字列を数値に変換
+process3 = Fraction(process2).limit_denominator(100)  # 小数を分数に変換
+print(f"面積(処理後):{process3}")
