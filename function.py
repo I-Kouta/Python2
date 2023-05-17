@@ -1,5 +1,6 @@
 # 関数で解く
 from sympy import Symbol, integrate, solve
+from sympy.plotting import plot
 from fractions import Fraction
 # 二次関数で囲まれた面積を求める
 
@@ -19,9 +20,13 @@ def enclosed_area():
 
 
 print(f"交点(x座標):{solve(f1 - f2, x)}")
-print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
 
+print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
 process1 = abs(enclosed_area())  # 絶対値に変換
 process2 = str(process1)  # 文字列を数値に変換
 process3 = Fraction(process2).limit_denominator(100)  # 小数を分数に変換
 print(f"面積(処理後):{process3}")
+
+# グラフ表示
+p1 = plot(f1, f2, show=False)
+p1.show()
