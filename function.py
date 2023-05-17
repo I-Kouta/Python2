@@ -1,13 +1,15 @@
 # 関数で解く
 from sympy import Symbol, integrate, solve
 from sympy.plotting import plot
+import matplotlib.pyplot as plt
 from fractions import Fraction
 # 二次関数で囲まれた面積を求める
 
 # 関数の定義
 x = Symbol("x")
-f1 = -(x - 2)**2 + 4
-f2 = (x - 3)**2 - 9
+f1 = -(x - 2)**2 + 9  # -(x + 1)(x - 5) = -x**2 + 4*x + 5
+f2 = (x - 3)**2 - 9  # x**2 - 6x = x(x - 6)
+# [5/2 - sqrt(35)/2, 5/2 + sqrt(35)/2]:sqrt(35)は約5.9
 
 
 def enclosed_area():
@@ -19,6 +21,13 @@ def enclosed_area():
     return area
 
 
+# グラフ表示
+p1 = plot(f1, f2, show=False)
+# 関数の式を表示
+p1[0].label = f1
+p1[1].label = f2
+p1.legend = True
+
 print(f"交点(x座標):{solve(f1 - f2, x)}")
 
 print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
@@ -27,6 +36,4 @@ process2 = str(process1)  # 文字列を数値に変換
 process3 = Fraction(process2).limit_denominator(100)  # 小数を分数に変換
 print(f"面積(処理後):{process3}")
 
-# グラフ表示
-p1 = plot(f1, f2, show=False)
-p1.show()
+p1.show()  # これが実際にグラフを表示させる。ここより下にコードは書かない
