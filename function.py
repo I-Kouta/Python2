@@ -6,8 +6,8 @@ from fractions import Fraction
 
 # 関数の定義
 x = Symbol("x")
-f1 = -x**2 + 1
-f2 = x**2 - 1
+f1 = -(x - 2)**2 + 4
+f2 = (x - 3)**2 - 9
 
 
 def enclosed_area():
