@@ -23,12 +23,6 @@ def enclosed_area():
 
 # グラフ表示
 p1 = plot(f1, f2, show=False)
-# 関数の式を表示
-p1[0].line_color = "blue"
-p1[1].line_color = "green"
-p1[0].label = f1
-p1[1].label = f2
-p1.legend = True
 
 # 囲まれた範囲に色を付ける
 
@@ -39,5 +33,12 @@ process1 = abs(enclosed_area())  # 絶対値に変換
 process2 = str(process1)  # 文字列を数値に変換
 process3 = Fraction(process2).limit_denominator(100)  # 小数を分数に変換
 print(f"面積(処理後):{process3}")
+
+# 関数の式を表示
+p1[0].line_color = "blue"
+p1[1].line_color = "green"
+p1[0].label = f1
+p1[1].label = f2
+p1.legend = True
 
 p1.show()  # これが実際にグラフを表示させる。ここより下にコードは書かない
