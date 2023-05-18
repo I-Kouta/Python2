@@ -24,9 +24,15 @@ def enclosed_area():
 # グラフ表示
 p1 = plot(f1, f2, show=False)
 # 関数の式を表示
+p1[0].line_color = "blue"
+p1[1].line_color = "green"
 p1[0].label = f1
 p1[1].label = f2
 p1.legend = True
+# 囲まれた範囲に色を付ける
+intersection_points = solve(f1 - f2, x)
+intersection_points = [float(point) for point in intersection_points]
+plt.fill_between([intersection_points[0], intersection_points[1]], [f1.subs(x, intersection_points[0]), f1.subs(x, intersection_points[1])], [f2.subs(x, intersection_points[0]), f2.subs(x, intersection_points[1])], color='gray', alpha=0.3)
 
 print(f"交点(x座標):{solve(f1 - f2, x)}")
 
