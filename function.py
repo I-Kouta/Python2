@@ -1,7 +1,6 @@
 # 関数で解く
 from sympy import Symbol, integrate, solve
 from sympy.plotting import plot
-import matplotlib.pyplot as plt
 from fractions import Fraction
 # 二次関数で囲まれた面積を求める
 
@@ -20,15 +19,12 @@ def enclosed_area():
     area = integrate(f2 - f1, (x, intersection_points[0], intersection_points[1]))
     return area
 
-
 # グラフ表示
 p1 = plot(f1, f2, show=False)
-
-# 囲まれた範囲に色を付ける
-
 print(f"交点(x座標):{solve(f1 - f2, x)}")
-
+# 交点y座標も算出するならここ
 print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
+
 process1 = abs(enclosed_area())  # 絶対値に変換
 process2 = str(process1)  # 文字列を数値に変換
 process3 = Fraction(process2).limit_denominator(100)  # 小数を分数に変換
@@ -36,7 +32,7 @@ print(f"面積(処理後):{process3}")
 
 # 関数の式を表示
 p1[0].line_color = "blue"
-p1[1].line_color = "green"
+p1[1].line_color = "red"
 p1[0].label = f1
 p1[1].label = f2
 p1.legend = True
