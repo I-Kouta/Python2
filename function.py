@@ -21,7 +21,8 @@ def enclosed_area():
 
 # グラフ表示
 p1 = plot(f1, f2, show=False)
-print(f"交点(x座標):{solve(f1 - f2, x)}")
+coordinateX = solve(f1 - f2, x)
+print(f"交点(x座標):{coordinateX}")
 # 交点y座標も算出するならここ
 print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
 
