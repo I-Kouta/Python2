@@ -26,7 +26,6 @@ coordinatesX = [float(point) for point in crossPoints]
 coordinatesY = [f1.subs(x, point) for point in coordinatesX]
 print(f"交点(x座標):{coordinatesX}")
 print(f"交点(y座標):{coordinatesY}")
-# 交点y座標も算出するならここ
 print(f"面積(返り値):{enclosed_area()}")  # 小数、負の値の場合がある
 
 process1 = abs(enclosed_area())  # 絶対値に変換
@@ -37,8 +36,10 @@ print(f"面積(処理後):{process3}")
 # 関数の式を表示
 p1[0].line_color = "blue"
 p1[1].line_color = "red"
-p1[0].label = f1
-p1[1].label = f2
+label1 = f"blue:{f1}"
+label2 = f"red:{f2}"
+p1[0].label = label1
+p1[1].label = label2
 p1.legend = True
 
 p1.show()  # これが実際にグラフを表示させる。ここより下にコードは書かない
