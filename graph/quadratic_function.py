@@ -9,7 +9,7 @@ x = Symbol("x")
 f1 = -(x - 2)**2 + 9  # -(x + 1)(x - 5) = -x**2 + 4*x + 5
 f2 = (x - 3)**2 - 9  # x**2 - 6x = x(x - 6)
 # [5/2 - sqrt(35)/2, 5/2 + sqrt(35)/2]:sqrt(35)は約5.9
-
+# quadratic_function
 
 def enclosed_area():
     # 交点を求める
