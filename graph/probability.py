@@ -14,4 +14,5 @@ plt.plot(x, y)
 plt.xlabel('number of trials') # 試行回数
 plt.ylabel('result') # 結果
 plt.ylim(0, 1)
+plt.text(50, 0.8, r'$y = 1 - 0.99^x$', fontsize=12, color='red')
 plt.show()
