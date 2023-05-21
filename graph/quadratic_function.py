@@ -36,10 +36,8 @@ print(f"面積(処理後):{process3}")
 # 関数の式を表示
 p1[0].line_color = "blue"
 p1[1].line_color = "red"
-label1 = f"blue:{f1}"
-label2 = f"red:{f2}"
-p1[0].label = label1
-p1[1].label = label2
+p1[0].label = f"blue:{f1}"
+p1[1].label = f"red:{f2}"
 p1.legend = True
 
 p1.show()  # これが実際にグラフを表示させる。ここより下にコードは書かない
