@@ -14,11 +14,13 @@ expected_values = []
 for i in range(1, num_trials + 1):
     expected_value = calculate_expected_value(rolls[:i])
     expected_values.append(expected_value)
+
+expected_value = calculate_expected_value(rolls) # 全体の期待値を計算
 # グラフ作成
 plt.plot(range(1, num_trials + 1), expected_values)
-plt.axhline(y=3.5, color="r", linestyle="--", label="Expected Value: 3.5")
+plt.axhline(y=expected_value, color="r", linestyle="--", label=f"Expected Value: {expected_value}")
 plt.xlabel('number of trials')
 plt.ylabel('expected value')
-plt.ylim(1, 6)
+plt.ylim(numBegin, numEnd - 1)
 plt.legend()
 plt.show()
