@@ -1,4 +1,4 @@
-# plot.py
+# python plot.py
 import numpy as np
 import matplotlib.pyplot as plt
 

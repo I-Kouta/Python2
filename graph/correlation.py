@@ -1,4 +1,4 @@
-# 相関関係のグラフ作成(correlation.py)
+# 相関関係のグラフ作成(python correlation.py)
 import numpy as np
 import matplotlib.pyplot as plt
 

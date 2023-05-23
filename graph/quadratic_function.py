@@ -1,4 +1,4 @@
-# 関数で解く(quadratic_function.py)
+# 関数で解く(python quadratic_function.py)
 from sympy import Symbol, integrate, solve
 from sympy.plotting import plot
 from fractions import Fraction

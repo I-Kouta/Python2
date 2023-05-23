@@ -1,4 +1,4 @@
-# 試行回数と確率のグラフ(probability.py)
+# 試行回数と確率のグラフ(python probability.py)
 import numpy as np
 import matplotlib.pyplot as plt
 
