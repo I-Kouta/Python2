@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="8OVgTBO33CAektXjgZgU" name="ページ1">
-        <mxGraphModel dx="647" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -38,7 +38,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="Mq_WKWzOuVJJA53EsoG7" name="ダイクストラアルゴリズム">
-        <mxGraphModel dx="647" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -103,7 +103,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="4-UkFtzJ29Bs3gqxI56_" name="条件付き確率">
-        <mxGraphModel dx="894" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -410,28 +410,28 @@
                 <mxCell id="3pSuXfIU4LHuy6EgzhDf-74" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;偽陽性の割合が上がってしまう条件&lt;br&gt;→陽性率が下がる・特異度が下がる&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=#FFFF00;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="340" y="400" width="290" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-1" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;特異度が向上&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;→偽陽性の確率は下がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-1" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;特異度が向上&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;→偽陽性の確率は下がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="135" y="460" width="167" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-2" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;陽性率が低下&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は上がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-2" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;陽性率が低下&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は上がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="380" y="280" width="167" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-3" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;特異度が向上&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は下がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-3" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;特異度が向上&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は下がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="748" y="430" width="167" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-4" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=14;" edge="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-4" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=14;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="680" y="390" as="sourcePoint"/>
                         <mxPoint x="680" y="520" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-5" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=14;" edge="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-5" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=14;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="393.5" y="630" as="sourcePoint"/>
                         <mxPoint x="533.5" y="630" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-6" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;陽性率が低下&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は上がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+                <mxCell id="m4IiQjFq-Tm_oV3C1XR0-6" value="&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;陽性率が低下&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(24, 20, 29);&quot;&gt;→偽陽性の確率は上がる&lt;/span&gt;" style="text;html=1;strokeColor=#FFFFFF;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="380" y="660" width="167" height="50" as="geometry"/>
                 </mxCell>
             </root>
