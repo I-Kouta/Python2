@@ -1,4 +1,4 @@
-# 偽陽性と特異度のグラフ(python falsePositive1.py)
+# 偽陽性と陽性者率のグラフ(python falsePositive1.py)
 # 陽性者率は0.01~0.4程度で指定する
 import numpy as np
 import matplotlib.pyplot as plt
