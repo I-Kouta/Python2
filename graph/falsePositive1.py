@@ -17,6 +17,6 @@ falsePositiveRates = (falsePositive) / (falsePositive + truePositive) # 偽陽�
 plt.plot(positive_rates_x, falsePositiveRates)
 plt.xlabel("positive rate") # 陽性者率
 plt.ylabel("false positive rate") # 偽陽性率
-plt.title(f"positive rate - false positive rate (specificities:{specificities * 100}%)")
+plt.title(f"positive rate - false positive rate (specificities:{specificities * 100}%)") # 特異度を変数で表示させる
 plt.grid(True)
 plt.show()
