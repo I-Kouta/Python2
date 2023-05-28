@@ -2,6 +2,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 # 90年12月末:6.08%
+
+def calculate_deposit(deposit, pastRate, years):
+    deposit = [deposit]
+    for _ in range(years):
+        deposit.append(deposit[-1] * (1 + pastRate))
+    return deposit
+
 deposit = 10000
 pastRate = 0.0575 # 70年12月末:5.75%
 recentlyRate = 0.00003 # 22年3月末:0.003%
+years = 10
+deposit_values = calculate_deposit(deposit, pastRate, years)
