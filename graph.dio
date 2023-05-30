@@ -472,22 +472,22 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-1" value="&lt;p style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;基本情報：&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;初期金額 principal&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;&amp;nbsp;= 100,000(10万円)&lt;br&gt;一月あたりの利息 rate = 1.25%&lt;br&gt;一月での支払い金額 pay = 20,000(2万円)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;一月あたりの利息 rate = 1.25%(0.0125)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-1" value="&lt;p style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;基本情報：&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;初期金額 principal&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;&amp;nbsp;= 100,000(10万円)&lt;br&gt;一月あたりの利息 rate = 1.25%&lt;br&gt;一月での支払い金額 pay = 20,000(2万円)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;一月あたりの利息 rate = 1.25%(0.0125)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="920" y="40" width="310" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-2" value="n = 1(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 20,000円&lt;br&gt;残金balance = (principal - pay) * 1.0125 = 81,000(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-2" value="n = 1(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 20,000円&lt;br&gt;残金balance = (principal - pay) * 1.0125 = 81,000(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="921" y="158" width="310" height="51" as="geometry"/>
                 </mxCell>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-5" value="n = 2(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 40,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 61,762(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-5" value="n = 2(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 40,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 61,762(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="921" y="214" width="310" height="51" as="geometry"/>
                 </mxCell>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-6" value="n = 3(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 60,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 42,284(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-6" value="n = 3(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 60,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 42,284(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="922" y="273" width="310" height="51" as="geometry"/>
                 </mxCell>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-7" value="n = 4(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 80,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 22,562(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-7" value="n = 4(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 80,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 22,562(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="923" y="326" width="310" height="51" as="geometry"/>
                 </mxCell>
-                <mxCell id="CxSfWLBQ2KWtTnWzawuy-8" value="n = 5(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 100,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 2,594(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-8" value="n = 5(ヶ月後)&lt;br&gt;累計支払い金額 pay * n = 100,000円&lt;br&gt;残金balance = (balance - pay) * 1.0125 = 2,594(円)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="922" y="379" width="310" height="51" as="geometry"/>
                 </mxCell>
             </root>
