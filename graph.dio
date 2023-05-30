@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="8OVgTBO33CAektXjgZgU" name="ページ1">
-        <mxGraphModel dx="647" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -103,7 +103,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="4-UkFtzJ29Bs3gqxI56_" name="条件付き確率">
-        <mxGraphModel dx="647" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -463,6 +463,20 @@
                 </mxCell>
                 <mxCell id="3jZaoS6qtBMpFm-2W_HI-12" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;falsePositive1.py：特異度固定、陽性率を0.01~0.4に上がると偽陽性の割合は下がる&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;falsePositive2.py：陽性率固定、特異度を0.5~0.9に上がると偽陽性の割合は下がる&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="535" width="560" height="65" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="IBhJ3uNfXNKJXLC_vxML" name="リボ払い">
+        <mxGraphModel dx="-180" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-1" value="&lt;p style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;基本情報：&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;初期金額 principal&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;&amp;nbsp;= 100,000(10万円)&lt;br&gt;一月あたりの利息 rate = 1.25%&lt;br&gt;一月での支払い金額 pay = 20,000(2万円)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(156, 220, 254); background-color: rgb(31, 31, 31); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;一月あたりの利息 rate = 1.25%&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="40" width="310" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="CxSfWLBQ2KWtTnWzawuy-2" value="1ヶ月後：&lt;br&gt;累計支払い金額 20,000万円" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="160" width="310" height="90" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
