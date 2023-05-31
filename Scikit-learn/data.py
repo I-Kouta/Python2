@@ -9,8 +9,11 @@ iris = datasets.load_iris() # Irisデータセットをロード,data, target, t
 x = iris.data # 特微量(説明変数)を保持するNumPy配列,行が花の特徴,列が特徴の種類
 y = iris.target # 目的変数(ラベル)を保持するNumPy配列,要素が品種に対応
 
-# データをトレーニングとテストに分割
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+# データをトレーニングとテストに分割, xが特徴料, yが目的変数
+x_train, x_test, y_train, y_test = train_test_split(x, # 元のデータの特微量配列
+                                                    y, # 元のデータの目的変数配列
+                                                    test_size=0.2, # テストデータの割合の指定
+                                                    random_state=42) # データ分割の際のランダムなシード値
 
 # モデルの作成とトレーニング
 model = LogisticRegression()
