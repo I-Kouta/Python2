@@ -18,9 +18,11 @@ x_train, x_test, y_train, y_test = train_test_split(
 
 # モデルの作成とトレーニング
 model = LogisticRegression() # 会期モデルのインスタンス作成
-model.fit(x_train, y_train) # 作成したモデルをトレーニングデータで学習,特徴料と目的変数を引数として受け取り関係を学習
+# 作成したモデルをトレーニングデータで学習,特徴料と目的変数を引数として受け取り関係を学習
+model.fit(x_train, y_train)
 
 # 予測の実行
+# modelを使用してx_testに対する目的変数の予測値を算出,学習した関数を使用して与えられた特微量からラベルを推定
 y_pred = model.predict(x_test)
 
 # 精度の評価
