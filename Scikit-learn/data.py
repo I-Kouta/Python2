@@ -25,7 +25,7 @@ model.fit(x_train, y_train)
 # modelを使用してx_testに対する目的変数の予測値を算出,学習した関数を使用して与えられた特微量からラベルを推定
 y_pred = model.predict(x_test)
 
-# 精度の評価
+# 一致度の評価,範囲は0~1
 accuracy = accuracy_score(y_test, y_pred)
 print(x)
 print(y)
