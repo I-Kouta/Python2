@@ -1,4 +1,4 @@
-# ランダムフォレスト実装(randomForest.py)
+# ランダムフォレスト実装(python randomForest.py)
 # ライブラリの読み込み
 import glob
 import pandas as pd
