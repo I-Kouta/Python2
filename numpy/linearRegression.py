@@ -21,6 +21,9 @@ a = 1
 b = 1
 h = a * X + b
 
+m = X.shape[0] # データ数
+j = (1/(2*m)) * ((h - Y) ** 2).sum() # 点ごとに予測値と正解値の差を二乗してデータ数mで平均をとる
+
 plt.scatter(X, Y)
 plt.plot(X, h, c="orange")
 plt.xlabel('height')
