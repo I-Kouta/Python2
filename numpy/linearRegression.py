@@ -16,8 +16,13 @@ def stand(x):
 
 X = stand(X) # 標準化
 Y = stand(Y)
+# 初期値1としてパラメータを設定
+a = 1
+b = 1
+h = a * X + b
 
 plt.scatter(X, Y)
+plt.plot(X, h, c="orange")
 plt.xlabel('height')
 plt.ylabel('weight')
 plt.show()
