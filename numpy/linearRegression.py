@@ -8,11 +8,11 @@ X = np.array([178, 190, 178, 187, 193, 196, 186, 181, 183, 178, 171, 174, 184, 1
 Y = np.array([80, 85, 83, 80, 102, 100, 86, 88, 81, 85, 78, 74, 92, 82, 73,
               87, 83, 90, 93, 97, 75, 103, 76, 68, 100, 73, 86, 80, 95, 70])
 # 標準化する間数定義
-def stand(x):
-    M = x.mean()
-    S = x.std()
-    x = (x - M) / S
-    return x
+def stand(X):
+    M = X.mean()
+    S = X.std()
+    X = (X - M) / S
+    return X
 
 X = stand(X) # 標準化
 Y = stand(Y)
@@ -28,7 +28,7 @@ for iter in range(iterations):
     h = a * X + b # 現在のパラメータで仮説を計算
     # パラメータ更新
     a = a - (alpha / m) * ((h - Y) * X).sum()
-    b = b - (alpha / m) * ((h - Y) * X).sum()
+    b = b - (alpha / m) * (h - Y).sum()
 
     h = a * X + b # 更新後のパラメータで仮設と目的関数を計算
     J = (1 / ( 2 *m)) * ((h - Y) ** 2).sum()
@@ -38,8 +38,19 @@ print("学習後のa: %f,"% a)
 print("学習後のb: %f,"% b)
 print("学習後の目的関数の値: %f,"% J)
 
-plt.scatter(X, Y)
-plt.plot(X, h, c="orange")
-plt.xlabel('height')
-plt.ylabel('weight')
-plt.show()
+fig = plt.figure() # 目的関数の値の推移と仮説のグラフを並べて表示
+# 1つめ
+ax1 = fig.add_subplot(1, 2, 1)
+ax1.plot(cost) # 目的関数の値を保存したリストをプロット
+ax1.set_xlabel('iteration')
+ax1.set_ylabel('cost')
+# 2つめのグラフ
+ax2 = fig.add_subplot(1, 2, 2)
+ax2.scatter(X, Y)
+h = a * X + b
+ax2.plot(X, h, c="orange") # 仮説のプロット
+ax2.legend((u"data", u"regression line")) # 凡例
+ax2.set_xlabel('height')
+ax2.set_ylabel('weight')
+fig.tight_layout()
+fig.show()
