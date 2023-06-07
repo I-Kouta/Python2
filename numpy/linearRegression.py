@@ -1,4 +1,4 @@
-# 線形回帰(python linearRegression.py)
+# 線形回帰(python linearRegression.py)dimension.py
 import numpy as np
 import matplotlib.pyplot as plt
 # 身長のデータ
