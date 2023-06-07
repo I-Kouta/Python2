@@ -17,16 +17,22 @@ def stand(x):
 X = stand(X) # 標準化
 Y = stand(Y)
 # 初期値1としてパラメータを設定
+m = X.shape[0] # データ数
 a = 1
 b = 1
-iterations = 1000 # 繰り返し回数
+iterations = 1000 # 繰り返し回数(イテレーション)
 alpha = 0.01 # 学習率
 cost = [] # 目的関数の値を保存するためのリスト
 
-h = a * X + b
+for iter in range(iterations):
+    h = a * X + b # 現在のパラメータで仮説を計算
+    # パラメータ更新
+    a = a - (alpha / m) * ((h - Y) * X).sum()
+    b = b - (alpha / m) * ((h - Y) * X).sum()
 
-m = X.shape[0] # データ数
-j = (1/(2*m)) * ((h - Y) ** 2).sum() # 点ごとに予測値と正解値の差を二乗してデータ数mで平均をとる
+    h = a * X + b # 更新後のパラメータで仮設と目的関数を計算
+    J = (1 / ( 2 *m)) * ((h - Y) ** 2).sum()
+    cost.append(J)
 
 plt.scatter(X, Y)
 plt.plot(X, h, c="orange")
