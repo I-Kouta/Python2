@@ -52,5 +52,5 @@ ax2.plot(X, h, c="orange") # 仮説のプロット
 ax2.legend((u"data", u"regression line")) # 凡例
 ax2.set_xlabel('height')
 ax2.set_ylabel('weight')
-fig.tight_layout()
-fig.show()
+plt.tight_layout()
+plt.show()
