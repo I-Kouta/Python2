@@ -33,6 +33,10 @@ for iter in range(iterations):
     h = a * X + b # 更新後のパラメータで仮設と目的関数を計算
     J = (1 / ( 2 *m)) * ((h - Y) ** 2).sum()
     cost.append(J)
+# 学習結果を表示
+print("学習後のa: %f,"% a)
+print("学習後のb: %f,"% b)
+print("学習後の目的関数の値: %f,"% J)
 
 plt.scatter(X, Y)
 plt.plot(X, h, c="orange")
