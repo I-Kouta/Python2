@@ -21,17 +21,17 @@ m = X.shape[0] # データ数
 a = 1
 b = 1
 iterations = 1000 # 繰り返し回数(イテレーション)
-alpha = 0.01 # 学習率
-cost = [] # 目的関数の値を保存するためのリスト
+alpha = 0.01 # 学習率, 小さいほど少しずつ更新する
+cost = [] # 目的関数(誤差)の値を保存するためのリスト
 
 for iter in range(iterations):
     h = a * X + b # 現在のパラメータで仮説を計算
     # パラメータ更新
-    a = a - (alpha / m) * ((h - Y) * X).sum()
-    b = b - (alpha / m) * (h - Y).sum()
+    a -= (alpha / m) * ((h - Y) * X).sum()
+    b -= (alpha / m) * (h - Y).sum()
 
     h = a * X + b # 更新後のパラメータで仮設と目的関数を計算
-    J = (1 / ( 2 *m)) * ((h - Y) ** 2).sum()
+    J = (1 / ( 2 * m)) * ((h - Y) ** 2).sum()
     cost.append(J)
 # 学習結果を表示
 print("学習後のa: %f,"% a)
