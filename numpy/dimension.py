@@ -9,6 +9,10 @@ y = wine.target # 分類ラベル
 feature_name = wine.feature_names[:3] # 特微量の名前
 target_name = wine.target_names # 目的量の名前
 
+s = np.cov(x, rowvar = 0, bias = 1) # 共分散行列を求める
+print(f"共分散行列のサイズ:{s.shape}")
+print(f"行列の値:{s}")
+
 fig = plt.figure()
 ax = fig.add_subplot(projection="3d") # 3Dで投影
 colors = ["red", "blue", "green"]
