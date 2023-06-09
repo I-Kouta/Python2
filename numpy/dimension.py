@@ -12,9 +12,9 @@ target_name = wine.target_names # 目的量の名前
 s = np.cov(x, rowvar = 0, bias = 1) # 共分散行列を求める
 eigen = np.linalg.eig(s) # 固有方程式を解く
 w = (eigen[1])[:, :2] # 固有ベクトルを2つ並べて変換行列を作成
+x_pca = x.dot(w) # 変換行列を作用させて線形変換を行う
 
-print(f"wのサイズ:{w.shape}")
-print(f"wの値:{w}")
+print(f"削減後のxのサイズ:{x_pca.shape}")
 
 fig = plt.figure()
 ax = fig.add_subplot(projection="3d") # 3Dで投影
