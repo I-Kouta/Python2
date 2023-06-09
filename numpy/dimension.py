@@ -10,8 +10,11 @@ feature_name = wine.feature_names[:3] # 特微量の名前
 target_name = wine.target_names # 目的量の名前
 
 s = np.cov(x, rowvar = 0, bias = 1) # 共分散行列を求める
-print(f"共分散行列のサイズ:{s.shape}")
-print(f"行列の値:{s}")
+eigen = np.linalg.eig(s) # 固有方程式を解く
+w = (eigen[1])[:, :2] # 固有ベクトルを2つ並べて変換行列を作成
+
+print(f"wのサイズ:{w.shape}")
+print(f"wの値:{w}")
 
 fig = plt.figure()
 ax = fig.add_subplot(projection="3d") # 3Dで投影
