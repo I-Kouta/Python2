@@ -14,21 +14,34 @@ eigen = np.linalg.eig(s) # 固有方程式を解く
 w = (eigen[1])[:, :2] # 固有ベクトルを2つ並べて変換行列を作成
 x_pca = x.dot(w) # 変換行列を作用させて線形変換を行う
 
-print(f"削減後のxのサイズ:{x_pca.shape}")
-
-fig = plt.figure()
-ax = fig.add_subplot(projection="3d") # 3Dで投影
+fig = plt.figure(figsize=(12, 5))
+fig.subplots_adjust(wspace=0.5)
+ax1 = fig.add_subplot(1, 2, 1, projection="3d") # 3Dで投影
 colors = ["red", "blue", "green"]
 for yy in np.unique(y):
-    ax.scatter(
+    ax1.scatter(
         x[:,0][y==yy],
         x[:,1][y==yy],
         x[:,2][y==yy],
         label=feature_name[yy],
         color=colors[yy],
         edgecolors='black')
-ax.set_xlabel(feature_name[0]) # alcohol:アルコール
-ax.set_ylabel(feature_name[1]) # malic_acid:リンゴ酸
-ax.set_zlabel(feature_name[2]) # ash:灰分
+ax1.set_xlabel(feature_name[0]) # alcohol:アルコール
+ax1.set_ylabel(feature_name[1]) # malic_acid:リンゴ酸
+ax1.set_zlabel(feature_name[2]) # ash:灰分
+ax1.set_title("original 3D plot")
+plt.legend()
+
+ax2 = fig.add_subplot(1, 2, 2)
+for yy in np.unique(y):
+    ax2.scatter(
+        x[:,0][y==yy],
+        x[:,1][y==yy],
+        label=feature_name[yy],
+        color=colors[yy],
+        edgecolors='black')
+ax2.set_xlabel("1st component")
+ax2.set_ylabel("2nd component")
+ax2.set_title("2D plot after PCA")
 plt.legend()
 plt.show()
