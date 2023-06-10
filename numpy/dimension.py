@@ -24,7 +24,7 @@ for yy in np.unique(y):
         x[:,0][y==yy],
         x[:,1][y==yy],
         x[:,2][y==yy],
-        label=target_name[yy],
+        label=feature_name[yy],
         color=colors[yy],
         edgecolors='black')
 ax.set_xlabel(feature_name[0]) # alcohol:アルコール
