@@ -2,7 +2,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.datasets import load_wine
-
+# 0, alcohol, アルコール
+# 1, malic_acid, リンゴ酸
+# 2, ash, 灰分
+# 3, alcalinity_of_ash, 灰のアルカリ度
+# 4, magnesium, マグネシウム
+# 5, total_phenols, 全フェノール
+# 6, flavanoids, フラボノイド
+# 7, nonflavanoid_phenols, 非フラボノイドフェノール
+# 8, proanthocyanins（プロアントシアニジン）
+# 9, color_intensity（色の濃さ）
+# 10, hue, 色相
+# 11. od280/od315_of_diluted_wines, 希釈ワインのOD280 / OD315比
+# 12, proline, プロリン
 wine = load_wine() # データセットをロード
 graph_datasets = [0, 1, 2]
 x = wine.data[:, graph_datasets] # 3次元のデータを読み込む
