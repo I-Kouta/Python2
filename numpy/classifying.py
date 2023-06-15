@@ -11,6 +11,9 @@ b = 0
 # 仮説を定義
 z = a * x + b # 線形回帰の仮説
 h = 1 / (1 + np.exp(-z)) # シグモイド関数
+m = x.shape[0] # データ数
+j = -(1 / m) * ((y * np.log(h) + (1 - y) * np.log(1 - h)).sum()) # 目的関数(交差エントロピー関数)
+print("初期値の（a,b）での目的関数の値:%f"% j)
 
 plt.yticks([0, 1]) #y軸の目盛り
 plt.scatter(x, y)
