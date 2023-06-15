@@ -24,6 +24,10 @@ for iter in range(iterations):
     j = -(1 / m) * ((y * np.log(h) + (1 - y) * np.log(1 - h)).sum()) # 目的関数(交差エントロピー関数)
     cost.append(j)
 
+print("学習後のa:%f,"% a)
+print("学習後のb:%f,"% b)
+print("学習後の目的関数の値:%f,"% j)
+
 plt.yticks([0, 1]) #y軸の目盛り
 plt.scatter(x, y)
 plt.plot(x, h, c="orange")
