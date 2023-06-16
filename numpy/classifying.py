@@ -28,10 +28,22 @@ print("学習後のa:%f,"% a)
 print("学習後のb:%f,"% b)
 print("学習後の目的関数の値:%f,"% j)
 
-plt.yticks([0, 1]) #y軸の目盛り
-plt.scatter(x, y)
-plt.plot(x, h, c="orange")
-plt.legend((u"data", u"regression line")) # 凡例
-plt.xlabel('Number of defective pridcts')
+fig = plt.figure()
+ax1 = fig.add_subplot(1, 2, 1)
+ax1.plot(cost)
+ax1.set_xlabel('iteration')
+ax1.set_ylabel('cost')
+
+ax2 = fig.add_subplot(1, 2, 2)
+ax2.set_yticks([0, 1]) #y軸の目盛り
+ax2.scatter(x, y)
+x = np.arange(0, 20, 0.1)
+z = a * x + b
+h = 1 / (1 + np.exp(-z))
+ax2.plot(x, h, c="orange")
+ax2.legend((u"data", u"regression line")) # 凡例
+plt.xlabel('number of defective pridcts')
 plt.ylabel('Label')
+
+plt.tight_layout()
 plt.show()
