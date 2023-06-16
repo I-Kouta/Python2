@@ -9,19 +9,19 @@ y = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
 m = x.shape[0] # データ数
 a = 0
 b = 0
-iterations = 1000
+iterations = 100000
 alpha = 0.01
 cost = []
 for iter in range(iterations):
     # 仮説を定義
     z = a * x + b # 線形回帰の仮説
     h = 1 / (1 + np.exp(-z)) # シグモイド関数
-    a -= (alpha / m) * ((h - y) * x).sum()
-    b -= (alpha / m) * (h - y).sum()
+    a -= (alpha / m) * (((h - y) * x).sum())
+    b -= (alpha / m) * ((h - y).sum())
 
     z = a * x + b
     h = 1 / (1 + np.exp(-z)) # シグモイド関数
-    j = -(1 / m) * ((y * np.log(h) + (1 - y) * np.log(1 - h)).sum()) # 目的関数(交差エントロピー関数)
+    j = -((y * np.log(h) + (1 - y) * np.log(1 - h)).sum()) / m # 目的関数(交差エントロピー関数)
     cost.append(j)
 
 print("学習後のa:%f,"% a)
