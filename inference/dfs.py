@@ -5,7 +5,9 @@ class TreeNode: # 左下と右下に繋がっているノードが何かを定�
         self.val = val
         self.left = left
         self.right = right
-tree = [1, 2, 3, 4, 5, 6]
+
+tree = [1, 2, 3, 4, 5, 6, 7] # このノードを左右のノードに登録する
+
 def make_tree(tree, node, i, n): # 二文木を作成
     # node:今見ているノード
     # i:今見ているノードのインデックス
@@ -19,5 +21,5 @@ def make_tree(tree, node, i, n): # 二文木を作成
         node.right = make_tree(tree, node.right, 2 * i + 2, n)
     return node
 
-root = make_tree(tree, None, 0, len(tree))
-print(root.val, root.left.val, root.right.val)
+root = make_tree(tree, None, 0, len(tree)) # スタート地点
+print(root.val, root.left.val, root.right.right.val)
