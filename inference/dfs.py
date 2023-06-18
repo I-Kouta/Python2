@@ -27,11 +27,11 @@ root = make_tree(tree, None, 0, len(tree)) # スタート地点
 stack = deque([root]) # データ構造にリストを置換
 # 深さ優先探索の実装, 空になるまでループを続ける
 while stack:
-    node = stack.pop()
-    ans.append(node.val)
-    if node.right:
+    node = stack.pop() # stackの右側から要素を一つ取り出す
+    ans.append(node.val) # ansに追加
+    if node.right: # 右側のノードが存在するならstackに追加
         stack.append(node.right)
-    if node.left:
+    if node.left: # 左側のノードが存在するならstackに追加
         stack.append(node.left)
 
 print(root.val, root.left.val, root.right.val, root.left.left.val, root.left.right.val, root.right.left.val)
