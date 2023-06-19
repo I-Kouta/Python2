@@ -34,5 +34,17 @@ while stack:
     if node.left: # 左側のノードが存在するならstackに追加
         stack.append(node.left)
 
+bfsQueue = []
+queue = deque([root]) # データ構造にリストを置換
+while queue:
+    node = queue.popleft() # queueの左側から要素を一つ取り出す
+    bfsQueue.append(node.val)
+    if node.left: # 左側のノードが存在するならqueueに追加
+        queue.append(node.left)
+    if node.right: # 右側のノードが存在するならqueueに追加
+        queue.append(node.right)
+
+
 print(root.val, root.left.val, root.right.val, root.left.left.val, root.left.right.val, root.right.left.val)
 print(ans)
+print(bfsQueue)
