@@ -51,4 +51,15 @@ print(bfsQueue) # 幅優先探索
 # 一筆書きをしてノードの値の和が大きくなる経路を探す
 ansSum = [] # 各経路の和を保存するためのリスト
 sum = 0 # 各経路の和
-stackSum = deque([root, sum]) # 木と和も同時に記録する必要がある
+stackSum = deque([(root, sum)]) # 木と和も同時に記録する必要がある
+while stackSum:
+    node, current_sum = stackSum.pop()
+    current_sum += node.val
+    if not node.left and not node.right:
+        ansSum.append(current_sum)
+    if node.right:
+        stackSum.append((node.right, current_sum))
+    if node.left:
+        stackSum.append((node.left, current_sum))
+
+print(max(ansSum)) # 10
