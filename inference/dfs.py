@@ -46,5 +46,9 @@ while queue:
 
 
 print(root.val, root.left.val, root.right.val, root.left.left.val, root.left.right.val, root.right.left.val)
-print(ans)
-print(bfsQueue)
+print(ans) # 深さ優先探索
+print(bfsQueue) # 幅優先探索
+# 一筆書きをしてノードの値の和が大きくなる経路を探す
+ansSum = [] # 各経路の和を保存するためのリスト
+sum = 0 # 各経路の和
+stackSum = deque([root, sum]) # 木と和も同時に記録する必要がある
