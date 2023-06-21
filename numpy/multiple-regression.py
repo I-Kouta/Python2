@@ -1,7 +1,6 @@
 # 重回帰(python multiple-regression.py)
 import numpy as np
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 
 # X1：一つ目の説明変数（身長 [cm]）
 x1 = np.array([131, 132, 132, 133.5, 135, 142, 143.8, 144, 148, 149, 150, 152, 153, 157, 158,
