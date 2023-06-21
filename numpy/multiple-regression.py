@@ -14,6 +14,16 @@ x2 = np.array([1120, 1340, 1600, 1450, 1500, 1700, 1800, 1780, 2100, 1900, 2000,
 y = np.array([28, 29, 35, 40, 31, 40, 42, 45, 50, 48, 56, 50, 51, 56, 65,
               61, 66, 61.5, 69, 71, 63, 68, 80, 74, 76.5, 82, 68, 75, 92, 90])
 
+def stand(X):
+    M = X.mean()
+    S = X.std()
+    X = (X - M) / S
+    return X
+
+x1 = stand(x1)
+x2 = stand(x2)
+y = stand(y)
+
 fig = go.Figure(go.Scatter3d(x = x1,y = x2,z = y,mode = 'markers',marker=dict(size=2), line=dict(color="blue")))
 fig.update_layout(
     scene = {
