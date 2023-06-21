@@ -27,9 +27,9 @@ y = stand(y)
 fig = go.Figure(go.Scatter3d(x = x1,y = x2,z = y,mode = 'markers',marker=dict(size=2), line=dict(color="blue")))
 fig.update_layout(
     scene = {
-        "xaxis": {"title":"Height"},
-        "yaxis":{"title":"cal"},
-        "zaxis": {"title":"Weight"},
+        "xaxis": {"title":"X:Height"},
+        "yaxis":{"title":"Y:cal"},
+        "zaxis": {"title":"Z:Weight"},
         'camera_eye': {"x": 1, "y": -1.5, "z": 1},
         "aspectratio": {"x": 1, "y": 1, "z": 1}
         }
