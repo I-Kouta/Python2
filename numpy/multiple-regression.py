@@ -24,6 +24,11 @@ x1 = stand(x1)
 x2 = stand(x2)
 y = stand(y)
 
+m = x1.shape[0] # データ数
+x = np.c_ones[x1, x2, np.ones([m, 1])]
+theta = np.ones([3, 1])
+h = np.dot(x, theta)
+
 fig = go.Figure(go.Scatter3d(x = x1,y = x2,z = y,mode = 'markers',marker=dict(size=2), line=dict(color="blue")))
 fig.update_layout(
     scene = {
