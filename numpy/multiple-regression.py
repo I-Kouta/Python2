@@ -26,13 +26,13 @@ Y = stand(Y)
 
 m = X1.shape[0] # データ数
 X = np.c_[X1, X2, np.ones([m, 1])]
-theta = np.ones([3, 1])
-h = np.dot(X, theta) # 仮説定義
+theta = np.ones([3, 1]) # 初期値を1としてパラメータを設定
+h = np.dot(X, theta) # 行列積を用いたドット積で仮説定義
 G = go.Scatter3d(x = X1, y = X2, z = Y, mode = 'markers', marker=dict(size=2), line=dict(color="blue"))
 x1 = x2 = np.linspace(-1.5, 1.5, 100)
-X1,X2 = np.meshgrid(x1,x2)
-h=theta[0]*X1+theta[1]*X2+theta[2]
-H = go.Surface(x = X1,y = X2,z = h, opacity=0.8)
+X1, X2 = np.meshgrid(x1,x2)
+h = theta[0]*X1+theta[1]*X2+theta[2]
+H = go.Surface(x = X1,y = X2,z = h, opacity=0.7)
 fig = go.Figure()
 fig.add_trace(G)
 fig.add_trace(H)
