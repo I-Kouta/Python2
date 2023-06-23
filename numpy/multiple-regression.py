@@ -28,6 +28,8 @@ m = X1.shape[0] # データ数
 X = np.c_[X1, X2, np.ones([m, 1])]
 theta = np.ones([3, 1]) # 初期値を1としてパラメータを設定
 h = np.dot(X, theta) # 行列積を用いたドット積で仮説定義
+J = (1 / ( 2 * m)) * ((h - Y) ** 2).sum() # 目的関数の計算(二重和誤差)
+print("初期値の（x1,x2,y）での目的関数の値:%f"% J)
 G = go.Scatter3d(x = X1, y = X2, z = Y, mode = 'markers', marker=dict(size=2), line=dict(color="blue"))
 x1 = x2 = np.linspace(-1.5, 1.5, 100)
 X1, X2 = np.meshgrid(x1,x2)
@@ -46,5 +48,5 @@ fig.update_layout(
         "aspectratio": {"x": 1, "y": 1, "z": 1}
         }
         )
-print(fig.to_html())
+# print(fig.to_html())
 fig.show()
