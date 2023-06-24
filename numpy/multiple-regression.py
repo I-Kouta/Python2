@@ -46,8 +46,12 @@ print("学習後のa1: %f,"% theta[0])
 print("学習後のa2: %f,"% theta[1])
 print("学習後のb: %f,"% theta[2])
 print("学習後の目的関数の値: %f,"% J)
-plt.plot(cost)
-plt.show()
+figCost = go.Figure(data = go.Scatter(y = cost))
+figCost.update_layout(
+    title = "cost function",
+    xaxis_title = "iteration",
+    yaxis_title = "cost",)
+figCost.show()
 
 G = go.Scatter3d(x = X1, y = X2, z = Y.reshape(30,), mode = "markers", marker = dict(size = 2), line = dict(color = "blue"))
 x1 = x2 = np.linspace(-1.5, 1.5, 100)
