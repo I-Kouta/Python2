@@ -39,7 +39,7 @@ for iter in range(iterations):
     theta[1] = theta[1] - (alpha / m) * (h - Y).T.dot(X2)
     theta[2] = theta[2] - (alpha / m) * (h - Y).sum()
     h = np.dot(X, theta) # 更新後のパラメータで仮設と目的関数を計算
-    J = (1 / ( 2 * m)) * ((h - Y) ** 2).sum()
+    J = (1 / (2 * m)) * ((h - Y) ** 2).sum()
     cost.append(J)
 
 print("学習後のa1: %f,"% theta[0])
@@ -49,7 +49,7 @@ print("学習後の目的関数の値: %f,"% J)
 plt.plot(cost)
 plt.show()
 
-G = go.Scatter3d(x = X1, y = X2, z = Y, mode = 'markers', marker = dict(size=2), line=dict(color="blue"))
+G = go.Scatter3d(x = X1, y = X2, z = Y.reshape(30,), mode = "markers", marker = dict(size = 2), line = dict(color = "blue"))
 x1 = x2 = np.linspace(-1.5, 1.5, 100)
 X1, X2 = np.meshgrid(x1, x2)
 h = theta[0] * X1 + theta[1] * X2 + theta[2]
