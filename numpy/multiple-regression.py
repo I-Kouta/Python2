@@ -42,9 +42,12 @@ for iter in range(iterations):
     J = (1 / (2 * m)) * ((h - Y) ** 2).sum()
     cost.append(J)
 
-print("学習後のa1: %f,"% theta[0])
-print("学習後のa2: %f,"% theta[1])
-print("学習後のb: %f,"% theta[2])
+a1 = theta[0]
+a2 = theta[1]
+b = theta[2]
+print("学習後のa1: %f,"% a1)
+print("学習後のa2: %f,"% a2)
+print("学習後のb: %f,"% b)
 print("学習後の目的関数の値: %f,"% J)
 figCost = go.Figure(data = go.Scatter(y = cost))
 figCost.update_layout(
