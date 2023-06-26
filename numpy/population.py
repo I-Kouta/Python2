@@ -22,6 +22,9 @@ X_ = np.c_[X ** 2, X, np.ones([m, 1])] # 配列を結合
 theta = np.ones([3, 1]) # パラメータを設定
 h = np.dot(X_, theta) # 仮説
 
+J = (1 / (2 * m)) * ((h - Y) ** 2).sum()
+print("初期値での目的関数の値:%f"%J)
+
 plt.scatter(X, Y) #散布図
 plt.plot(X, h, c='red')
 plt.legend((u'Data',u'Regression line'))
