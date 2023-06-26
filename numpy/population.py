@@ -17,7 +17,14 @@ def stand(x):
 X = stand(X)
 Y = stand(Y)
 
+m = X.shape[0]
+X_ = np.c_[X ** 2, X, np.ones([m, 1])]
+theta = np.ones([3, 1])
+h = np.dot(X_, theta)
+
 plt.scatter(X, Y) #散布図
+plt.plot(X, h, c='red')
+plt.legend((u'Data',u'Regression line'))
 plt.xlabel('Year')
 plt.ylabel('Population(15-64)')
 plt.show()
