@@ -18,9 +18,9 @@ X = stand(X)
 Y = stand(Y)
 
 m = X.shape[0]
-X_ = np.c_[X ** 2, X, np.ones([m, 1])]
-theta = np.ones([3, 1])
-h = np.dot(X_, theta)
+X_ = np.c_[X ** 2, X, np.ones([m, 1])] # 配列を結合
+theta = np.ones([3, 1]) # パラメータを設定
+h = np.dot(X_, theta) # 仮説
 
 plt.scatter(X, Y) #散布図
 plt.plot(X, h, c='red')
