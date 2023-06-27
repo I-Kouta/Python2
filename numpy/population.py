@@ -39,10 +39,21 @@ print("学習後のa1: %f,"% theta[0])
 print("学習後のa2: %f,"% theta[1])
 print("学習後のb: %f,"% theta[2])
 print("学習後の目的関数の値: %f,"% J)
+print(cost)
 
-# plt.scatter(X, Y) #散布図
-# plt.plot(X, h, c='red')
-# plt.legend((u'Data',u'Regression line'))
-# plt.xlabel('Year')
-# plt.ylabel('Population(15-64)')
-# plt.show()
+fig = plt.figure() # 目的関数の値の推移と仮説のグラフを並べて表示
+# 1つめ
+ax1 = fig.add_subplot(1, 2, 1)
+ax1.plot(cost) # 目的関数の値を保存したリストをプロット
+ax1.set_xlabel('iteration')
+ax1.set_ylabel('cost')
+# 2つめのグラフ
+ax2 = fig.add_subplot(1, 2, 2)
+ax2.scatter(X, Y)
+h = np.dot(X_, theta)
+ax2.plot(X, h, c="red")
+ax2.legend((u"data", u"regression line"))
+ax2.set_xlabel('year')
+ax2.set_ylabel('population(15-64)')
+plt.tight_layout()
+plt.show()
