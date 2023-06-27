@@ -28,18 +28,17 @@ cost = []
 
 for iter in range(iterations):
     h = np.dot(X_, theta) # 現在のパラメータで仮説を計算
-    theta[0] = theta[0] - (alpha / m) * (h - Y).T.dot(X ** 2)
-    theta[1] = theta[1] - (alpha / m) * (h - Y).T.dot(X)
-    theta[2] = theta[2] - (alpha / m) * (h - Y).sum()
+    theta[0] -= (alpha / m) * (h - Y).T.dot(X ** 2)
+    theta[1] -= (alpha / m) * (h - Y).T.dot(X)
+    theta[2] -= (alpha / m) * (h - Y).sum()
     h = np.dot(X_, theta) # 更新後のパラメータで仮設と目的関数を計算
     J = (1 / (2 * m)) * ((h - Y) ** 2).sum()
     cost.append(J)
 
-print("学習後のa1: %f,"% theta[0])
-print("学習後のa2: %f,"% theta[1])
+print("学習後のx**2の係数: %f,"% theta[0])
+print("学習後のxの係数: %f,"% theta[1])
 print("学習後のb: %f,"% theta[2])
 print("学習後の目的関数の値: %f,"% J)
-print(cost)
 
 fig = plt.figure() # 目的関数の値の推移と仮説のグラフを並べて表示
 # 1つめ
