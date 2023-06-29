@@ -13,18 +13,18 @@ def simple_perceptron(x1, x2):
     elif y > 0:
       return 1
 
-#いくつか値をいれて、実際にためしてみましょう↓
+# いくつか値をいれて、実際にためしてみましょう↓
 print(simple_perceptron(0, 0))
 print(simple_perceptron(0, 1))
 
-def sigmoid(x):
-    return 1/(1+np.exp(-x))
+def sigmoid(x): # シグモイド間数の定義
+    return 1 / (1 + np.exp(-x))
 
-#sigmoid関数を描画
-x = np.linspace(-6,6,1000)
-y = sigmoid(x)
+# シグモイド関数を描画
+x = np.linspace(-6, 6, 1000)
+y = sigmoid(x) # 0~1の値を返す
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.plot(x,y)
+ax.plot(x, y)
 plt.show()
