@@ -3,6 +3,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def confirm_execution():
+  confirmation = input("実行するためにはyを押してください:")
+  return confirmation.lower() == "y"
+
+
 def simple_perceptron(x1, x2):
     w1 = 0.2 # x1の重み
     w2 = 0.8 # x2の重み
@@ -12,10 +17,6 @@ def simple_perceptron(x1, x2):
       return 0
     elif y > 0:
       return 1
-
-# いくつか値をいれて、実際にためしてみましょう↓
-print(simple_perceptron(0, 0))
-print(simple_perceptron(0, 1))
 
 def sigmoid(x): # シグモイド間数の定義
     return 1 / (1 + np.exp(-x))
@@ -34,14 +35,23 @@ def nn_1(x): # 簡易のニュートラルネットワーク, xを入力とし�
   return y
 
 x = np.array([0.3, 0.6])
-y = nn_1(x)
-print(y)
+y1 = nn_1(x)
 
 # シグモイド関数を描画
 x = np.linspace(-6, 6, 1000)
 y = sigmoid(x) # 0~1の値を返す
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
-ax.plot(x, y)
-plt.show()
+def execute_matrix_calculation():
+  print(simple_perceptron(0, 0))
+  print(simple_perceptron(0, 1))
+  print(y1)
+
+  fig = plt.figure()
+  ax = fig.add_subplot(111)
+  ax.plot(x, y)
+  plt.show()
+
+if confirm_execution():
+   execute_matrix_calculation()
+else:
+   print("プログラムを終了します。")
