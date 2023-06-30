@@ -20,6 +20,22 @@ print(simple_perceptron(0, 1))
 def sigmoid(x): # シグモイド間数の定義
     return 1 / (1 + np.exp(-x))
 
+def nn_1(x): # 簡易のニュートラルネットワーク, xを入力として受け取りyを返す
+  w1 = np.array([[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]])
+  b1 = np.array([[0.1, 0.2, 0.3]])
+
+  w2 = np.array([[0.1, 0.3], [0.2, 0.4], [0.5, 0.7]])
+  b2 = np.array([[0.1, 0.3]])
+
+  m = np.dot(x, w1) + b1
+  n = sigmoid(m)
+  y = np.dot(n, w2) + b2
+  return y
+
+x = np.array([0.3,0.6])
+y = nn_1(x)
+print(y)
+
 # シグモイド関数を描画
 x = np.linspace(-6, 6, 1000)
 y = sigmoid(x) # 0~1の値を返す
