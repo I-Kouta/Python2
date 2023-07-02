@@ -91,8 +91,8 @@ def select_parameters(lmbda, reg, force_symmetric_loss, force_one_nonpredictive)
             break
     return Z, a, b, c, x, y
 def plot_loss(boundary, reg,
-              boundary_color = "#2D435D",
-              boundary_dot_color = "#E32CA6",
+              boundary_color = "blue", # 制約を表す等高線
+              boundary_dot_color = "red", # 制約と損失関数の接点
               force_symmetric_loss = False, force_one_nonpredictive = False,
               show_contours = True, contour_levels = 50, show_loss_eqn = False,
               show_min_loss = True,idx = None, fig = None, ax = None, num_trials = None):
@@ -198,7 +198,7 @@ def just_contour():
     ax.scatter([cx], [cy], s = 20, c = "k")
     plt.tight_layout()
     plt.show()
-## main script ##
+
 n_trials = 12 # 15以下
 contour_levels = 50
 mode = "L1" # ここで正則化を切り替える
