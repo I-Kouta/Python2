@@ -1,4 +1,6 @@
 # 正則化・過学習(python regular.py)
+# L1正則化:寄与の小さい重みをゼロにする
+# L2正則化:重みの中でも寄与が小さい重みを選択的に小さくしている
 import numpy as np
 import matplotlib.pyplot as plt
 import glob
@@ -8,9 +10,10 @@ import warnings
 lmbda = 2
 w, h = 10, 10
 
-#パラメータ(ここでは二変数のみ)
+# パラメータ2つ
 beta0 = np.linspace(-w, w, 100)
 beta1 = np.linspace(-h, h, 100)
+
 B0, B1 = np.meshgrid(beta0, beta1)
 def diamond(lmbda = 1, n = 100):
     "get points along diamond at distance lmbda from origin"
@@ -24,10 +27,11 @@ def diamond(lmbda = 1, n = 100):
     x = np.linspace(-lmbda, 0, num = n // 4)
     points.extend(list(zip(x,  x + lmbda)))
     return np.array(points)
+
 def circle(lmbda = 1, n = 100):
     # 極座標系
     points = []
-    for angle in np.linspace(0,np.pi / 2, num = n // 4):
+    for angle in np.linspace(0, np.pi / 2, num = n // 4):
         x = np.cos(angle) * lmbda
         y = np.sin(angle) * lmbda
         points.append((x, y))
@@ -44,10 +48,11 @@ def circle(lmbda = 1, n = 100):
         y = np.sin(angle) * lmbda
         points.append((x, y))
     return np.array(points)
+
 def loss(b0, b1,
          a = 1,
          b = 1,
-         c = 0,     # a～c 軸の広がり
+         c = 0,     # a～c軸の広がり
          cx = -10,  # x軸の中心からのずれ
          cy = 5):   # y軸の中心からのずれ
     return a * (b0 - cx) ** 2 + b * (b1 - cy) ** 2 + c * (b0 - cx) * (b1 - cy)
@@ -63,10 +68,10 @@ def select_parameters(lmbda, reg, force_symmetric_loss, force_one_nonpredictive)
         elif force_one_nonpredictive:
             if np.random.random() > 0.5:
                 a = np.random.random() * 15 - 5
-                b = .1
+                b = 0.1
             else:
                 b = np.random.random() * 15 - 5
-                a = .1
+                a = 0.1
             c = 0
         x, y = 0, 0
         # L1正則化の時
@@ -82,7 +87,7 @@ def select_parameters(lmbda, reg, force_symmetric_loss, force_one_nonpredictive)
         # Lossの値(Z軸の値)
         Z = loss(B0, B1, a = a, b = b, c = c, cx = x, cy = y)
         loss_at_min = loss(x, y, a = a, b = b, c = c, cx = x, cy = y)
-        if (Z >= loss_at_min).all(): # 鞍点がない場合
+        if (Z >= loss_at_min).all(): # 鞍点(アンテン)がない場合
             break
     return Z, a, b, c, x, y
 def plot_loss(boundary, reg,
@@ -194,12 +199,9 @@ def just_contour():
     plt.tight_layout()
     plt.show()
 ## main script ##
-####以下の値で表示内容を切り替えてください.####
-#n_trialsは15以下の数字を入力してください
-n_trials = 12
+n_trials = 12 # 15以下
 contour_levels = 50
-mode = "L1"
+mode = "L1" # ここで正則化を切り替える
 s = 0
-##############################################
 np.random.seed(s)
 show_example(reg = mode, num_trials = n_trials)
