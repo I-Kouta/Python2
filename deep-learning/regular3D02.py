@@ -75,16 +75,13 @@ def plot_regularization(mode):
 
     #最初に表示する視点や大きさを決める
     fig.update_layout(
-            scene = {
-                "xaxis": {"nticks": 20,"title":"w1"},
-                "yaxis":{"title":"w2"},
-                "zaxis": {"nticks": 4,"title":"Loss"},
-                'camera_eye': {"x": 1, "y": -1.5, "z": 1},
-                "aspectratio": {"x": 1, "y": 1, "z": 1}
-            },
-            width=700,
-            height=500)
-
+        scene = {
+            "xaxis": {"nticks": 20,"title":"w1"},
+            "yaxis":{"title":"w2"},
+            "zaxis": {"nticks": 4,"title":"Loss"},
+            'camera_eye': {"x": 1, "y": -1.5, "z": 1},
+            "aspectratio": {"x": 1, "y": 1, "z": 1}
+            })
     fig.show()
 
 # main script
