@@ -10,7 +10,7 @@ a = np.linspace(0.1, 1.0, 10)
 
 fig = plt.figure(figsize = (12, 12))
 for i in range(len(a)):
-    text = "a = " + str(a[i])
+    text = "a = " + str(round(a[i], 2)) # 大きい酷カーブが急になる(ゲインが1の時に標準)
     ax = fig.add_subplot(5, 5, i + 1, title = text)
     ax.plot(x, sigmoid(x, a[i]))
 
