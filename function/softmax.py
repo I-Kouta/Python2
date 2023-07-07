@@ -1,4 +1,4 @@
-# ソフトマックス関数(python softmax.py)
+# ソフトマックス関数(python softMax.py)
 # 出力の値の合計が1になる → 確率として解釈
 import numpy as np
 
