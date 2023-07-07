@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 # f'(x) = f(x) * (1 - f(x))
+# 微分を続けると値が0に近づいてしまう(勾配消失)
 def grad_sigmoid(x): # 微分後のsigmoid関数を定義
     sigmoid = 1 / (1 + np.exp(-x))
     return sigmoid * (1 - sigmoid)
