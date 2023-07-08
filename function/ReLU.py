@@ -6,11 +6,18 @@ import matplotlib.pyplot as plt
 def relu(x):
   return np.maximum(0, x) # 入力が0以下の場合は0を出力する
 
-x = np.linspace(-8, 8, 1000)
-y = relu(x)
+# Leaky ReLU関数の定義
+def leakyrelu(x):
+  return np.where(x > 0, x, 0.01 * x) # xが0未満の場合には0.01倍を返す
+
+x = np.linspace(-5, 5, 1000)
+y = leakyrelu(x)
+y_r = relu(x)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.plot(x, y)
+ax.plot(x, y, label = "leakyrelu")
+ax.plot(x, y_r, label = "relu")
+plt.legend()
 plt.grid()
 plt.show()
