@@ -8,4 +8,8 @@ model = nn.Sequential(
     nn.Linear(8, 1),
     nn.Sigmoid()
 )
+
+loss_fn = nn.BCELoss() # 真の値と予測を比較して誤差を返す(損失関数)
+
 print(model)
+print(loss_fn)
