@@ -20,6 +20,6 @@ print(model)
 print(loss_fn)
 
 y = w * x + b
-print(y) # 計算の流れを記憶できる
+print(y) # 計算の流れを記憶できる(x, wをMulBackward(掛け算), bをAddBackward(足し算))
 y.backward() # 計算の逆向きに自動で勾配を計算してくれる
-print(w.grad)
+print(w.grad) # 勾配はgrad属性変数に保存される
