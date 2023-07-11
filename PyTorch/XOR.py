@@ -30,6 +30,11 @@ for epoch in range(2000): # 2000エポック学習させる
 
 x_axis_list = [num for num in range(2000)]#x軸方向のリスト
 
+print(model(torch.tensor([0.0, 0.0])))
+print(model(torch.tensor([1.0, 0.0])))
+print(model(torch.tensor([0.0, 1.0])))
+print(model(torch.tensor([1.0, 1.0])))
+
 plt.xlabel("epoch")
 plt.ylabel("loss")
 plt.plot(x_axis_list,y_axis_list)
