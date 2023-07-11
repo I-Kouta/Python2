@@ -37,5 +37,5 @@ print(model(torch.tensor([1.0, 1.0])))
 
 plt.xlabel("epoch")
 plt.ylabel("loss")
-plt.plot(x_axis_list,y_axis_list)
+plt.plot(x_axis_list, y_axis_list)
 plt.show()
