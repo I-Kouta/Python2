@@ -46,10 +46,8 @@ net = Net() # インスタンス化
 criterion = nn.BCELoss() # 損失関数の設定(BCE損失)
 optimizer = torch.optim.SGD(net.parameters(), lr = 0.1) # 最適化手法の選択(SGD)
 
-y_axis_list = [] #損失プロット用y軸方向リスト
-
 for epoch in range(100):
-  for batch, label in train_dataloader: #エポックのループの内側で、さらにデータローダーによるループ
+  for batch, label in train_dataloader: # エポックのループの内側で、さらにデータローダーによるループ
     optimizer.zero_grad()
     t_p = net(batch)
     label = label.unsqueeze(1) #損失関数に代入するために次元を調節する処理
@@ -76,3 +74,4 @@ X_red = test_X[pred_labels == 0]
 X_blue = test_X[pred_labels == 1]
 plt.scatter(X_red[:, 0], X_red[:, 1], color='red')
 plt.scatter(X_blue[:, 0], X_blue[:, 1], color='blue')
+plt.show()
