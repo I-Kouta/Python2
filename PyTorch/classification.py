@@ -59,13 +59,19 @@ for epoch in range(100):
   # y_axis_list.append(loss.detach().numpy()) # プロット用のy軸方向リストに損失の値を代入
   if epoch % 10 == 0: # 10エポック毎に損失の値を表示
     print(f"epoch: {epoch + 1}  loss: {round(float(loss), 6)}")
-
 # 離散化を行う関数
 def discretize(proba):
   threshold = torch.Tensor([0.5]) # 0・1を分ける閾値を0.5に設定
   discretized = (proba >= threshold).int() # 閾値未満で0,以上で1に変換
   return discretized
-
+# 離散化の処理
+with torch.no_grad(): # 試験用データでは勾配を計算しない
+    pred_labels = [] # バッチごとの結果格納
+    for x in test_X:
+            pred = net(x)
+            pred_label = discretize(pred) # 離散化する
+            pred_labels.append(pred_label[0])
+pred_labels = np.array(pred_labels) # numpy arrayに変換
 x_axis_list = [num for num in range(100)] # 損失プロット用x軸方向リスト
 # 損失の描画
 plt.xlabel("epoch")
