@@ -12,7 +12,8 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # 変換
 transform = transforms.Compose([
     transforms.ToPILImage(),  # PIL画像に変換する処理
-    transforms.RandomHorizontalFlip(p = 1)
+    transforms.RandomHorizontalFlip(p = 1) # 水平方向に回転
+    # transforms.RandomVerticalFlip(p = 1) # 垂直方向に回転
 ])
 transform = transform(img_rgb)
 
