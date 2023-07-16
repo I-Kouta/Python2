@@ -6,14 +6,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 # OpenCVを使って画像を読み込む
-img = cv2.imread("/Users/ko-ta/downloads/ダーク系.jpg")
-#BGRをRGBに変換
+img = cv2.imread("/Users/ko-ta/downloads/insta.jpg")
+# BGRをRGBに変換
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # 変換
 transform = transforms.Compose([
     # 指定した画像サイズで切り取る
     transforms.ToPILImage(),
-    transforms.RandomCrop(size = 200)
+    transforms.RandomCrop(size = 200),
+    transforms.ColorJitter(brightness = 0.3, contrast = 0.5)
 
     # ランダム箇所を消去する
     # transforms.ToTensor(),
