@@ -11,10 +11,10 @@ img = cv2.imread("/Users/ko-ta/downloads/insta.jpg")
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # 変換
 transform = transforms.Compose([
-    # 指定した画像サイズで切り取る
     transforms.ToPILImage(),
-    transforms.RandomCrop(size = 200),
-    transforms.ColorJitter(brightness = 0.3, contrast = 0.5)
+    transforms.RandomRotation(degrees = 50), # 回転させる
+    transforms.RandomCrop(size = 200), # 指定した画像サイズで切り取る
+    transforms.ColorJitter(brightness = 0.3, contrast = 0.5) # 明るさ調整
 
     # ランダム箇所を消去する
     # transforms.ToTensor(),
