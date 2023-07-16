@@ -11,9 +11,17 @@ img = cv2.imread("/Users/ko-ta/downloads/ダーク系.jpg")
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # 変換
 transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.RandomErasing(p = 1),
-    transforms.ToPILImage()  # PIL画像に変換する処理
+    # 指定した画像サイズで切り取る
+    transforms.ToPILImage(),
+    transforms.RandomCrop(size = 200)
+
+    # ランダム箇所を消去する
+    # transforms.ToTensor(),
+    # transforms.RandomErasing(p = 1),
+    # transforms.ToPILImage()
+
+    # 回転させる
+    # transforms.ToPILImage(),  # PIL画像に変換する処理
     # transforms.RandomHorizontalFlip(p = 1) # 水平方向に回転
     # transforms.RandomVerticalFlip(p = 1) # 垂直方向に回転
 ])
@@ -25,7 +33,7 @@ def visualize(original, reverse):
     plt.imshow(original)
 
     plt.subplot(1, 2, 2)
-    plt.title("reverse")
+    plt.title("image 2")
     plt.imshow(reverse)
     plt.show()
 
