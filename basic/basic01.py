@@ -29,3 +29,13 @@ def quadratic(a, b, c, x):
 
 answer = quadratic(1, -5, -2, 7)
 print(answer)
+
+# ヘロンの公式
+def heron(a, b, c):
+  s = (a + b + c) / 2
+  return math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+side1 = 3
+side2 = 4
+side3 = 5
+print(f"3辺が{side1}, {side2}, {side3}の三角形の面積:{heron(side1, side2, side3)}")
