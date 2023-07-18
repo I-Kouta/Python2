@@ -22,3 +22,10 @@ def m_to_ft(m):
 m = 18.44
 inches, feet = m_to_ft(m)
 print(f"{m}メートル = {inches}インチ = {feet}フィート")
+
+# 二次関数の値を求める
+def quadratic(a, b, c, x):
+  return a * x ** 2 + b * x + c
+
+answer = quadratic(1, -5, -2, 7)
+print(answer)
