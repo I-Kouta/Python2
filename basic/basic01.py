@@ -44,8 +44,16 @@ print(f"3辺が{side1}, {side2}, {side3}の三角形の面積:{heron(side1, side
 def qe_disc(a, b, c):
   return b ** 2 - 4 * a * c
 
+def qe_solution(a, b, c):
+  desc = qe_disc(a, b, c)
+  desc1 = (-b + math.sqrt(desc)) / (2 * a)
+  desc2 = (-b - math.sqrt(desc)) / (2 * a)
+  return desc1, desc2
+
 valueA = 1
 valueB = -2
 valueC = 1
 discriminate = qe_disc(valueA, valueB, valueC) # 判別結果
+desc1, desc2 = qe_solution(valueA, valueB, valueC)
 print(f"判別結果:{discriminate}")
+print(f"解:{desc1}, {desc2}")
