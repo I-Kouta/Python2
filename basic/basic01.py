@@ -39,3 +39,13 @@ side1 = 3
 side2 = 4
 side3 = 5
 print(f"3辺が{side1}, {side2}, {side3}の三角形の面積:{heron(side1, side2, side3)}")
+
+# 二次方程式の判別式と解qe_disc, qe_solution
+def qe_disc(a, b, c):
+  return b ** 2 - 4 * a * c
+
+valueA = 1
+valueB = -2
+valueC = 1
+discriminate = qe_disc(valueA, valueB, valueC) # 判別結果
+print(f"判別結果:{discriminate}")
