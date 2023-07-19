@@ -45,9 +45,8 @@ def qe_disc(a, b, c):
   return b ** 2 - 4 * a * c
 
 def qe_solution(a, b, c):
-  desc = qe_disc(a, b, c)
-  desc1 = (-b + math.sqrt(desc)) / (2 * a)
-  desc2 = (-b - math.sqrt(desc)) / (2 * a)
+  desc1 = (-b + math.sqrt(qe_disc(a, b, c))) / (2 * a)
+  desc2 = (-b - math.sqrt(qe_disc(a, b, c))) / (2 * a)
   return desc1, desc2
 
 valueA = 1
