@@ -56,3 +56,12 @@ discriminate = qe_disc(valueA, valueB, valueC) # 判別結果
 desc1, desc2 = qe_solution(valueA, valueB, valueC)
 print(f"判別結果:{discriminate}")
 print(f"解:{desc1}, {desc2}")
+
+# 再帰(0, 1, …)
+def fin(n):
+  if n < 2:
+    return n
+  else:
+    return fin(n - 2) + fin(n - 1)
+
+print(fin(4))
