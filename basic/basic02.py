@@ -1,4 +1,6 @@
 # 仕様・テスト・デバッグ(python basic02.py)
+import random
+
 def square(x):
     return x ** x
 a = -2
@@ -21,3 +23,11 @@ substr1 = "le"
 substr2 = "me"
 print(substr1 in word1) # true
 print(substr2 in word1) # false
+
+print("\n")
+
+def random_sequence(length):
+    string = "ATCG"
+    sequence = "".join(random.choice(string) for _ in range(length))
+    return sequence
+print(random_sequence(10))
