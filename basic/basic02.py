@@ -33,7 +33,8 @@ def random_sequence(length): # ランダム文字列を生成する
 
 def atcg_bppair(atcg):
     before = atcg
-    after = atcg.replace("A", "T").replace("T", "A").replace("G", "C").replace("C", "G")
+    process = atcg.replace("A", "X").replace("T", "A").replace("X", "T")
+    after = process.replace("G", "Z").replace("C", "G").replace("Z", "C")
     print(before)
     print(after)
 
