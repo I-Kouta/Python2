@@ -26,8 +26,15 @@ print(substr2 in word1) # false
 
 print("\n")
 
-def random_sequence(length):
+def random_sequence(length): # ランダム文字列を生成する
     string = "ATCG"
     sequence = "".join(random.choice(string) for _ in range(length))
     return sequence
-print(random_sequence(10))
+
+def atcg_bppair(atcg):
+    before = atcg
+    after = atcg.replace("A", "T").replace("T", "A").replace("G", "C").replace("C", "G")
+    print(before)
+    print(after)
+
+atcg_bppair(random_sequence(10))
