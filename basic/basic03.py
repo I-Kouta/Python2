@@ -1,5 +1,6 @@
 # 条件分岐(python basic03.py)
 import random
+import matplotlib.pyplot as plt
 
 def exception3(x, y, z):
     if x == y:
@@ -32,3 +33,5 @@ for c in sequence:
         height[3] += 1
 
 print(height)
+plt.plot(height)
+plt.show()
