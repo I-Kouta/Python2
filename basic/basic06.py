@@ -22,3 +22,9 @@ dict["Thu"] = 13
 dict["Sat"] = 2
 dict["Sun"] = 9
 print(dict) # 20, 13, 9, 2
+
+# 辞書とループ
+counts = {"chuck" : 1, "annie" : 42, "jan": 100}
+for key in counts:
+    if counts[key] > 10: # キーが10より大きい場合
+        print(key, counts[key])
