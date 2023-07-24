@@ -15,3 +15,10 @@ parts = pieces[3].split('-') # リストの3番目を"-"で分ける
 print(parts)
 n = parts[1] # lar@freecodecamp.org
 print(n)
+
+# pythonの辞書
+dict = {"Fri": 20, "Thu": 6, "Sat": 1}
+dict["Thu"] = 13
+dict["Sat"] = 2
+dict["Sun"] = 9
+print(dict) # 20, 13, 9, 2
