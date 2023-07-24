@@ -17,14 +17,24 @@ n = parts[1] # lar@freecodecamp.org
 print(n)
 
 # pythonの辞書
-dict = {"Fri": 20, "Thu": 6, "Sat": 1}
-dict["Thu"] = 13
-dict["Sat"] = 2
-dict["Sun"] = 9
-print(dict) # 20, 13, 9, 2
+dicts = {"Fri": 20, "Thu": 6, "Sat": 1}
+dicts["Thu"] = 13
+dicts["Sat"] = 2
+dicts["Sun"] = 9
+print(dicts) # 20, 13, 9, 2
 
+print("\n")
 # 辞書とループ
 counts = {"chuck" : 1, "annie" : 42, "jan": 100}
 for key in counts:
     if counts[key] > 10: # キーが10より大きい場合
         print(key, counts[key])
+
+print("\n")
+# タプルコレクション
+d = dict()
+d["quincy"] = 1
+d["beau"] = 5
+d["kris"] = 9
+for (k, i) in d.items():
+    print(k, i)
