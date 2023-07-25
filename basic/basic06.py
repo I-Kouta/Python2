@@ -1,4 +1,5 @@
 # pythonを用いた科学技術計算(python basic06.py)
+import re
 # ループの用法, 値のリストから最小値を見つける
 smallest = None
 print(f"before:{smallest}")
@@ -38,3 +39,10 @@ d["beau"] = 5
 d["kris"] = 9
 for (k, i) in d.items():
     print(k, i)
+
+print("\n")
+# 正規表現:データの称号と抽出
+s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+# \\S+: 1文字以上の非空白文字
+lst = re.findall('\\S+@\\S+', s)
+print(lst)
