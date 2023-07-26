@@ -18,4 +18,23 @@ def prefixes(s):
     else:
         return [s] + prefixes(s[:-1]) # 接頭辞リストを返す
         # return [s] + prefixes(s[1:]) # 接尾辞リストを返す
-print(prefixes("abcde"))
+print(prefixes("abcde"), "\n")
+
+# べき乗の計算
+def power(base, expt):
+    if expt == 0:
+        return 1 # 0乗であれば1を返す
+    else:
+        # return base * power(base, expt - 1) # こっちだと再帰的
+        return base ** expt
+
+# 繰り返し処理だとこうなる
+def power2(base2, expt2):
+    e = 1
+    for i in range(expt2):
+        e *= base2
+    return e
+
+print(power(2, 10))
+print(power2(2, 10))
+# 226から
