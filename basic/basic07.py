@@ -3,7 +3,10 @@ import matplotlib.pyplot as plt
 
 # 折れ線グラフ
 ls1 = [1, 4, 9, 16]
-plt.plot(ls1)
+ls2 = [8, 7, 6, 16]
+plt.plot(ls1, label="1st plot")
+plt.plot(ls2, label="2nd plot")
+plt.legend()
 
 # 棒グラフ
 # x = [1, 2, 3, 4]
