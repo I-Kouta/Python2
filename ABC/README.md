@@ -5,6 +5,7 @@
 コマンドは`バックスラッシュ`で囲む  
 こうすると**太字**になる  
 または**太字**こうする  
-font で囲む<font color="yellow">黄色</font>になる
+font で囲む<font color="yellow">黄色</font>になる  
+プレビューを表示:command + K, V
 
 <!-- #の数が増えると小さくなる -->
