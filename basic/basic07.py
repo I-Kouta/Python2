@@ -2,11 +2,16 @@
 import matplotlib.pyplot as plt
 
 # 折れ線グラフ
-ls1 = [1, 4, 9, 16]
-ls2 = [8, 7, 6, 16]
-plt.plot(ls1, label="1st plot")
-plt.plot(ls2, label="2nd plot")
-plt.legend()
+# ls1 = [1, 4, 9, 16]
+# ls2 = [8, 7, 6, 16]
+# plt.plot(ls1, label="1st plot")
+# plt.plot(ls2, label="2nd plot")
+# plt.legend()
+
+# 散布図, 要素数は全て同じ数
+x = [1, 4, 9, 8]
+y = [8, 7, 6, 9]
+plt.scatter(x, y)
 
 # 棒グラフ
 # x = [1, 2, 3, 4]
