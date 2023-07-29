@@ -2,4 +2,6 @@
 import csv
 f = open("small.csv", "r")
 dataReader = csv.reader(f)
-print(next(dataReader))
+for row in dataReader:
+    print(row)
+f.close()
