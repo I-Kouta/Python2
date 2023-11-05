@@ -1,6 +1,6 @@
 # 10進数を変換する(python bin.py)
-num = 255
-binary_num = format(num, 'b')
+num = 25
+binary_num = format(num, '08b')
 binary_hex = format(num, 'x')
 print(f"{num}は2進数では{binary_num}")
 print(f"{num}は16進数では{binary_hex}")
