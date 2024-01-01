@@ -11,7 +11,7 @@ i = 0 # ループカウンタ
 while i < NUM:
     x = np.random.rand() # ランダムな点の位置x
     y = np.random.rand() # ランダムな点の位置y
-    if x * x + y * y <= 1: # 原点との距離が1未満なら
+    if x ** 2 + y ** 2 <= 1: # 原点との距離が1未満なら
         a += 1 # 1/4の円の中なのでカウント
         plt.scatter(x, y, color = 'red') # 赤い点で書く
     else: # 円の外であれば
