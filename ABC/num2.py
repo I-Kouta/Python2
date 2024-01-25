@@ -38,6 +38,7 @@ def decimal_to_powers(n):
         powers_list.append(power)
         n -= power
         power *= 2
+    powers_list.reverse()
     return powers_list
 
 # テスト
