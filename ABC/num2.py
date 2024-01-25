@@ -27,3 +27,20 @@ print(f"{intBin}をhexを使って16進数に変換すると「{hex}」")
 # 解法2: formatを使うと「0x」は付かない
 formatHex = format(intBin,"x")
 print(f"{intBin}をformatを使って16進数に変換すると「{formatHex}」\n")
+
+# 与えられた値を2進数に変換するプロセス
+def decimal_to_powers(n):
+    powers_list = []
+
+    # 2のべき乗を求める
+    power = 1
+    while power <= n:
+        powers_list.append(power)
+        n -= power
+        power *= 2
+    return powers_list
+
+# テスト
+decimal_number = 155
+powers_result = decimal_to_powers(decimal_number)
+print(f"{decimal_number}の各2のべき乗: {powers_result}")
