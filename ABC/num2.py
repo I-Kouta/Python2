@@ -32,16 +32,15 @@ print(f"{intBin}をformatを使って16進数に変換すると「{formatHex}」
 def decimal_to_powers(n):
     powers_list = []
 
-    # 2のべき乗を求める
-    power = 1
-    while power <= n:
-        powers_list.append(power)
-        n -= power
-        power *= 2
-    powers_list.reverse()
+    power = 128
+    while power > 0: # 足す値が1になったら終了する
+        if power <= n: # 与えられた値よりもpowerが小さければリストに入れる
+            powers_list.append(power)
+            n -= power
+        power //= 2
     return powers_list
 
 # テスト
-decimal_number = 155
+decimal_number = 90
 powers_result = decimal_to_powers(decimal_number)
 print(f"{decimal_number}の各2のべき乗: {powers_result}")
