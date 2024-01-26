@@ -31,16 +31,19 @@ print(f"{intBin}をformatを使って16進数に変換すると「{formatHex}」
 # 与えられた値を2進数に変換するプロセス
 def decimal_to_powers(n):
     powers_list = []
+    powers_list_bin = [] # 2進数を返すためのリスト
 
     power = 128
-    while power > 0: # 足す値が1になったら終了する
+    while power > 0: # 足す値が1になるまで繰り返す
         if power <= n: # 与えられた値よりもpowerが小さければリストに入れる
             powers_list.append(power)
-            n -= power
-        power //= 2
-    return powers_list
+            powers_list_bin.append(1) # 2進数の出力結果には1を格納
+            n -= power # 与えられた値から2のべき乗の値を引く
+        else:
+            powers_list_bin.append(0) # 2進数の出力結果には0を格納
+        power //= 2 # 2のべき乗を2で割る
+    return powers_list, powers_list_bin
 
-# テスト
-decimal_number = 90
+decimal_number = 250
 powers_result = decimal_to_powers(decimal_number)
 print(f"{decimal_number}の各2のべき乗: {powers_result}")
