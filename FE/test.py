@@ -12,3 +12,13 @@ def bin(x):
 x = 250
 x_after = bin(x)
 print(f"{x}を2進数に変換すると{x_after}")
+
+# 斜辺の長さを求める
+def calc(a, b):
+    calcResult = pow(pow(a, 2) + pow(b, 2), 1 / 2) # powメソッド : 第一引数の第二引数乗
+    return calcResult
+
+a = 1
+b = pow(3, 0.5)
+result = calc(a, b)
+print(f"底辺と高さが{a}, {b}の直角三角形の斜辺の長さは{result}")
