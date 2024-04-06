@@ -29,11 +29,28 @@ print("\n")
 
 # fizzBuzz問題
 for i in range(1, 31):
-    if (i % 15 == 0): # 15で割り切れる場合
+    if i % 15 == 0: # 15で割り切れる場合
         print("fizzBuzz")
-    elif (i % 3 == 0): # 3で割り切れる場合
+    elif i % 3 == 0: # 3で割り切れる場合
         print("fizz")
-    elif (i % 5 == 0): # 5で割り切れる場合
+    elif i % 5 == 0: # 5で割り切れる場合
         print("Buzz")
     else:
         print(i)
+
+print("\n")
+
+# 最大公約数を求める(ユークリッドの互除法)
+
+def gcd(x, y):
+    while x != y:
+        if x > y:
+            x, y = y, x - y
+        else:
+            x, y = y , y - x
+    return x
+
+num1 = 36
+num2 = 60
+result = gcd(num1, num2)
+print(f"{num1}, {num2}の最大公約数は{result}")
