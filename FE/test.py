@@ -13,6 +13,8 @@ x = 250
 x_after = bin(x)
 print(f"{x}を2進数に変換すると{x_after}")
 
+print("\n")
+
 # 斜辺の長さを求める
 def calc(a, b):
     calcResult = pow(pow(a, 2) + pow(b, 2), 1 / 2) # powメソッド : 第一引数の第二引数乗
@@ -22,3 +24,16 @@ a = 1
 b = pow(3, 0.5)
 result = calc(a, b)
 print(f"底辺と高さが{a}, {b}の直角三角形の斜辺の長さは{result}")
+
+print("\n")
+
+# fizzBuzz問題
+for i in range(1, 31):
+    if (i % 15 == 0): # 15で割り切れる場合
+        print("fizzBuzz")
+    elif (i % 3 == 0): # 3で割り切れる場合
+        print("fizz")
+    elif (i % 5 == 0): # 5で割り切れる場合
+        print("Buzz")
+    else:
+        print(i)
