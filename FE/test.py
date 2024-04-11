@@ -54,3 +54,26 @@ num1 = 36
 num2 = 60
 result = gcd(num1, num2)
 print(f"{num1}, {num2}の最大公約数は{result}")
+
+print("\n")
+
+# 二分探索アルゴリズム
+def binary_search(arr, x):
+    left = 0  # 探索の右端
+    right = len(arr) - 1  # 探索の左端
+    while left <= right:
+        mid = (left + right) // 2  # 探索範囲の中央を計算
+        if arr[mid] < x:  # 中央の値よりxが大きい場合
+            left = mid + 1  # 探索範囲の右を変える
+        elif arr[mid] > x:
+            right = mid - 1
+        else:
+            return mid + 1  # midはインデックス番号
+    return -1 # 配列に存在していない場合
+
+
+data = [10, 20, 30, 40, 50, 60]
+dataX = 30
+array = sorted(data)  # [10, 21, 32, 34, 43, 98]
+searchResult = binary_search(array, dataX)
+print(f"配列の{searchResult}番目に値が含まれている")
