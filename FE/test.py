@@ -77,3 +77,15 @@ dataX = 30
 array = sorted(data)  # [10, 21, 32, 34, 43, 98]
 searchResult = binary_search(array, dataX)
 print(f"配列の{searchResult}番目に値が含まれている")
+
+print("\n")
+
+# 階乗を返す
+def factorial(n):
+    if n <= 0:
+        return 1
+    return n * factorial(n - 1)
+
+c = 5
+d = factorial(c)
+print(f"{c}の階乗は{d}")
