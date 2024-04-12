@@ -29,7 +29,7 @@ print("\n")
 
 # fizzBuzz問題
 for i in range(1, 31):
-    if i % 15 == 0: # 15で割り切れる場合
+    if i % 3 == 0 and i % 5 == 0: # 3でも5でも割り切れる場合
         print("fizzBuzz")
     elif i % 3 == 0: # 3で割り切れる場合
         print("fizz")
