@@ -1,6 +1,6 @@
 # 基本情報の問題をコードにしてみる
 
-# 2で割ることを繰り返す、奇数変換の流れ図
+# 2で割ることを繰り返す、基数変換の流れ図
 def bin(x):
     x_after = []
     while x >= 1:
@@ -126,7 +126,7 @@ def arrayReverse(array):
     for left in range(1, len(array) // 2 + 1):
         right = len(array) - left # 4, 3の順で指定することになる
         tmp = array[right] # 値は5, 4の順で指定される
-        array[right] = array[left - 1] # インデックス番号は0からなので、-1する必要がある
+        array[right] = array[left - 1] # インデックス番号は0からなので、-1する
         array[left - 1] = tmp
     return array
 
@@ -137,3 +137,19 @@ print(f"{array} => {arrayReverse}")
 del array
 del arrayReverse
 print("\n")
+
+# 文字列同士の類似度を求める
+def simRatio(s1, s2):
+    if len(s1) != len(s2):
+        return -1
+    else:
+        count = 0
+        for i in range(1, len(s1) + 1): # 1から要素の数まで繰り返す
+            if s1[i - 1] == s2[i - 1]: # インデックス番号は0からなので、-1する
+                count += 1
+        return count / len(s1)
+
+sentenceA = ["a", "p", "p", "l", "e"]
+sentenceB = ["a", "p", "r", "i", "l"]
+result = simRatio(sentenceA, sentenceB)
+print(result)
