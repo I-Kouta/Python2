@@ -116,3 +116,24 @@ def feeCalculate(x):
 age = 4
 resultFee = feeCalculate(age)
 print(f"{age}歳の場合、料金は{resultFee}円")
+
+del age
+del resultFee
+print("\n")
+
+# 配列の要素を逆順にする
+def arrayReverse(array):
+    for left in range(1, len(array) // 2 + 1):
+        right = len(array) - left # 4, 3の順で指定することになる
+        tmp = array[right] # 値は5, 4の順で指定される
+        array[right] = array[left - 1] # インデックス番号は0からなので、-1する必要がある
+        array[left - 1] = tmp
+    return array
+
+array = [1, 2, 3, 4, 5]
+arrayReverse = arrayReverse(array)
+print(f"{array} => {arrayReverse}")
+
+del array
+del arrayReverse
+print("\n")
