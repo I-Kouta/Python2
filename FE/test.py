@@ -13,6 +13,8 @@ x = 250
 x_after = bin(x)
 print(f"{x}を2進数に変換すると{x_after}")
 
+del x
+del x_after
 print("\n")
 
 # 斜辺の長さを求める
@@ -25,6 +27,8 @@ b = pow(3, 0.5)
 result = calc(a, b)
 print(f"底辺と高さが{a}, {b}の直角三角形の斜辺の長さは{result}")
 
+del a
+del b
 print("\n")
 
 # fizzBuzz問題
@@ -55,6 +59,8 @@ num2 = 60
 result = gcd(num1, num2)
 print(f"{num1}, {num2}の最大公約数は{result}")
 
+del num1
+del num2
 print("\n")
 
 # 二分探索アルゴリズム
@@ -78,6 +84,9 @@ array = sorted(data)  # [10, 21, 32, 34, 43, 98]
 searchResult = binary_search(array, dataX)
 print(f"配列の{searchResult}番目に値が含まれている")
 
+del data
+del dataX
+del array
 print("\n")
 
 # 階乗を返す
@@ -89,3 +98,21 @@ def factorial(n):
 c = 5
 d = factorial(c)
 print(f"{c}の階乗は{d}")
+
+del c
+del d
+print("\n")
+
+# 入場料を返す
+def feeCalculate(x):
+    if x <= 3:
+        ret = 100
+    elif x <= 9:
+        ret = 300
+    else:
+        ret = 500
+    return ret
+
+age = 4
+resultFee = feeCalculate(age)
+print(f"{age}歳の場合、料金は{resultFee}円")
