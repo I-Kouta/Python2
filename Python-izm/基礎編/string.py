@@ -17,3 +17,8 @@ test_str += "-456"
 test_str += "-789" * 3
 print(test_str)
 print(test_str.split("-"))
+# 桁揃え
+string = "12321"
+print(string.rjust(10, "0"))
+print(string.startswith("12")) # true
+print(string.startswith("25")) # false
