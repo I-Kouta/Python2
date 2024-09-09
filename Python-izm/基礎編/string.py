@@ -22,3 +22,7 @@ string = "12321"
 print(string.rjust(10, "0"))
 print(string.startswith("12")) # true
 print(string.startswith("25")) # false
+# 大文字(小文字)変換
+text = "Clockwork"
+print(text.upper()) # 大文字
+print(text.lower()) # 小文字
