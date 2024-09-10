@@ -28,4 +28,4 @@ print("今日は1/1から" + str(calc.days) + "日後", "\n")
 #うるう年の判定
 print(calendar.isleap(2015)) # false
 print(calendar.isleap(2024)) # true
-print(calendar.leapdays(2010, 2020)) # して期間内にうるう年がある回数
+print(calendar.leapdays(2010, 2020)) # 期間内にうるう年がある回数
