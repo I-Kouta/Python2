@@ -12,3 +12,14 @@ for val in sample:
     print(val)
 
 # while文
+count = 0
+while count < 30:
+    count += 1
+    if count % 3 == 0 and count % 5 == 0:
+        print("fizzBuzz")
+    elif count % 3 == 0:
+        print("fizz")
+    elif count % 5 == 0:
+        print("Buzz")
+    else:
+        print(count)
