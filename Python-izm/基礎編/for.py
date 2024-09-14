@@ -11,6 +11,8 @@ sample.append("---")
 for val in sample:
     print(val)
 
+print("\n")
+
 # while文
 count = 0
 while count < 30:
@@ -24,8 +26,17 @@ while count < 30:
     else:
         print(count)
 
+print("\n")
+
 # continue
 for count in range(100):
     if count % 10: # 10で割った余りは次の処理へ
         continue
     print(count) # 10で割り切れる場合のみ表示
+
+print("\n")
+
+# range, xrange
+
+for i in range(2, 10): # 出力は2 - 9
+    print(i)
