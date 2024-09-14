@@ -23,3 +23,9 @@ while count < 30:
         print("Buzz")
     else:
         print(count)
+
+# continue
+for count in range(100):
+    if count % 10: # 10で割った余りは次の処理へ
+        continue
+    print(count) # 10で割り切れる場合のみ表示
