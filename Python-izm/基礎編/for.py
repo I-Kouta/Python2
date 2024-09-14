@@ -38,5 +38,23 @@ print("\n")
 
 # range, xrange
 
-for i in range(2, 10): # 出力は2 - 9
+for i in range(2, 10): # 出力は2から9
     print(i)
+
+print("\n")
+
+# 例外処理
+
+def exception(val1, val2):
+    print("計算開始")
+    result = 0
+    try:
+        result = val1 + val2
+    except: # エラーがなければ処理されない
+        print("計算不能")
+    finally: # 例外の有無に関わらず必ず実行される
+        print("計算終わり")
+    return result
+
+print(exception(100, 200)) # try, finally, return
+print(exception(100, "200")) # except, finally, return
