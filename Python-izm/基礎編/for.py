@@ -1,4 +1,6 @@
 # python for.py
+import sys
+import traceback
 
 sample = []
 sample.append("1つめ")
@@ -58,3 +60,26 @@ def exception(val1, val2):
 
 print(exception(100, 200)) # try, finally, return
 print(exception(100, "200")) # except, finally, return
+
+print("\n")
+
+# raise
+
+def exception2(value3, value4):
+    print("計算開始")
+    result = 0
+    try:
+        result = value3 + value4
+    except: # エラーがなければ処理されない
+        print("計算不能")
+        raise
+    finally: # 例外の有無に関わらず必ず実行される
+        print("計算終了")
+    return result
+
+try:
+    print(exception2(100, 100))
+    print(exception2(200, 200))
+    print(exception2(300, "300"))
+except: # raiseがないと実行されない
+    print("エラーを受け取りました")
