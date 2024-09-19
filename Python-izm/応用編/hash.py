@@ -17,3 +17,10 @@ print("\n")
 
 print(max([3, 2, 4, 5, 1]))
 print(min(["f", "D", "a", "A"])) # 文字列の最小値(A)
+
+print("\n")
+
+# 合計値
+num = [10, 20, 30, 20, 5, 3]
+print(sum(num)) # 和
+print(sum(num, 1000)) # 開始値を指定
