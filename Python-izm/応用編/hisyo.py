@@ -29,4 +29,10 @@ def make_application_sample(N, max_eval):
     normalized = (sample - min_sample) / (max_sample - min_sample) * max_eval
     return normalized
 
-print(make_application_sample(N, max_eval))
+def parse_secretary_problem(N, max_eval, verbose=False):
+    """
+    N : 応募者数
+    max_eval : 評価値の最大値
+    verbose : デバッグ情報を表示するか
+    return : 採用結果(候補者の評価値, 失敗ばら0)
+    """
