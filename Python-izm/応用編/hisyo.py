@@ -34,7 +34,7 @@ def parse_secretary_problem(N, max_eval, verbose=False):
     N : 応募者数
     max_eval : 評価値の最大値
     verbose : デバッグ情報を表示するか
-    return : 採用結果(候補者の評価値, 失敗ばら0)
+    return : 採用結果(候補者の評価値, 失敗なら0)
     """
     sample = make_application_sample(N, max_eval)
 
@@ -42,13 +42,18 @@ def parse_secretary_problem(N, max_eval, verbose=False):
     pos_bench = np.int(N / np.e)
     score_bench = np.max(sample[0 : pos_bench])
     if verbose:
-        print("採用見送り人数 : {}".format(pos_bench))
-        print("ベンチマークスコア : {}".format(score_bench))
-    result = 0
+        print("採用見送り人数(この値は一定で問題ない) : {}".format(pos_bench)) # 見送った人数
+        print("見送った人の最高スコア : {}".format(score_bench))
+    result = 0 # 0の場合は、採用失敗
     for _score in sample[pos_bench:]:
         # 面談者の評価値が、ベンチマークを上回ったか
         if _score >= score_bench:
             # ベンチマークを上回ったら、そこで採用して、選考プロセスを終了する
             result = _score
             break
-    return result
+    return result # 上回った値を返す
+
+# 動作試験
+for i in range(10):
+    print(parse_secretary_problem(N, max_eval, verbose=True))
+    print("-" * 70)
