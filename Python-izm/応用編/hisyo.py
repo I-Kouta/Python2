@@ -36,3 +36,12 @@ def parse_secretary_problem(N, max_eval, verbose=False):
     verbose : デバッグ情報を表示するか
     return : 採用結果(候補者の評価値, 失敗ばら0)
     """
+    sample = make_application_sample(N, max_eval)
+
+    # 先頭からN / e人を無条件で見送り、ベンチマーク評価値を作る
+    pos_bench = np.int(N / np.e)
+    score_bench = np.max(sample[0 : pos_bench])
+    if verbose:
+        print("採用見送り人数 : {}".format(pos_bench))
+        print("ベンチマークスコア : {}".format(score_bench))
+    result = 0
