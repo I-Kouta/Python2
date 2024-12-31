@@ -45,3 +45,10 @@ def parse_secretary_problem(N, max_eval, verbose=False):
         print("採用見送り人数 : {}".format(pos_bench))
         print("ベンチマークスコア : {}".format(score_bench))
     result = 0
+    for _score in sample[pos_bench:]:
+        # 面談者の評価値が、ベンチマークを上回ったか
+        if _score >= score_bench:
+            # ベンチマークを上回ったら、そこで採用して、選考プロセスを終了する
+            result = _score
+            break
+    return result
