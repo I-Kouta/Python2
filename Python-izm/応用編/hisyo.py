@@ -61,3 +61,4 @@ for i in range(n_exam):
     history.append(parse_secretary_problem(N, max_eval, verbose = False))
 history = np.array(history)
 print("採用結果の期待値 : {}".format(np.mean(history)))
+print("採用時の期待値 : {}".format(np.mean(history[history > 0])))
