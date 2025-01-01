@@ -26,7 +26,7 @@ def make_application_sample(N, max_eval):
     normalized = (sample - min_sample) / (max_sample - min_sample) * max_eval
     return normalized
 
-def parse_secretary_problem(N, max_eval, verbose=False):
+def parse_secretary_problem(N, max_eval, verbose = False):
     """
     N : 応募者数
     max_eval : 評価値の最大値
@@ -58,5 +58,6 @@ for i in range(10):
 # 採用結果、採用した人の評価値の履歴、できなければ0
 history = []
 for i in range(n_exam):
-    history.append(parse_secretary_problem(N, max_eval, verbose=False))
+    history.append(parse_secretary_problem(N, max_eval, verbose = False))
 history = np.array(history)
+print("採用結果の期待値 : {}".format(np.mean(history)))
