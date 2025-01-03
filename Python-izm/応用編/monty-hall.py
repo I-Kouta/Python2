@@ -23,5 +23,7 @@ def monty(num, y_or_n):
     sim_count = 0 # これまでの試行回数
     door = [1, 2, 3] # ドア3つ
     car_count = 0 # 当たりの回数
+    car = random.choice(door) # 当たりのドアをランダム
+    player = random.choice(door) # プレイヤーが選ぶドアをランダム
 
 sim_choice()
