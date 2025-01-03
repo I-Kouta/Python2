@@ -19,4 +19,9 @@ def sim_choice():
         print(f"試行回数 : {num_sim}回、ドア変更なし")
     return [num_sim, plyer_choice] # リストで返す[試行回数, ドア変y or n]
 
+def monty(num, y_or_n):
+    sim_count = 0 # これまでの試行回数
+    door = [1, 2, 3] # ドア3つ
+    car_count = 0 # 当たりの回数
+
 sim_choice()
