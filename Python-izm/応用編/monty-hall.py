@@ -25,5 +25,10 @@ def monty(num, y_or_n):
     car_count = 0 # 当たりの回数
     car = random.choice(door) # 当たりのドアをランダム
     player = random.choice(door) # プレイヤーが選ぶドアをランダム
+    if car == random.choice(door): # はじめに正解の場合
+
+    else:
+
+    sim_count += 1
 
 sim_choice()
