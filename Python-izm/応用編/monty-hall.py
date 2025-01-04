@@ -26,13 +26,19 @@ def monty(num, y_or_n):
     car = random.choice(door) # 当たりのドアをランダム
     player = random.choice(door) # プレイヤーが選ぶドアをランダム
     if car == random.choice(door): # はじめに正解の場合
-        door.remove(car) # 当たりのドアを外す
+        door.remove(car) # 当たりのドアを外して、
         monty_choice = random.choice(door) # ハズレのドアを選ぶ
         if y_or_n == "y":
             pass # 不正解でパス
         elif y_or_n == "n":
             car_count += 1 # 正解で当たりのカウントを+1
-    else:
+    else: # はじめに不正解の場合
+        door.remove(car) # 当たりのドアを外して、
+        monty_choice = random.choice(door) # ハズレのドアを選ぶ
+        if y_or_n == "y":
+            car_count += 1 # 正解で当たりのカウントを+1
+        elif y_or_n == "n":
+            pass # 不正解でパス
     sim_count += 1
 
 sim_choice()
