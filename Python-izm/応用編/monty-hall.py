@@ -25,27 +25,35 @@ def sim_choice():
 
 def monty(num, y_or_n):
     sim_count = 0 # これまでの試行回数
-    door = [1, 2, 3] # ドア3つ
     car_count = 0 # 当たりの回数
-    car = random.choice(door) # 当たりのドアをランダム
-    player = random.choice(door) # プレイヤーが選ぶドアをランダム
-    if car == random.choice(door): # はじめに正解の場合
-        door.remove(car) # 当たりのドアを外して、
-        monty_choice = random.choice(door) # ハズレのドアを選ぶ
-        if y_or_n == "y":
-            pass # 不正解でパス
-        elif y_or_n == "n":
-            car_count += 1 # 正解で当たりのカウントを+1
-    else: # はじめに不正解の場合
-        door.remove(car) # 当たりのドアを外して、
-        monty_choice = random.choice(door) # ハズレのドアを選ぶ
-        if y_or_n == "y":
-            car_count += 1 # 正解で当たりのカウントを+1
-        elif y_or_n == "n":
-            pass # 不正解でパス
-    sim_count += 1
-    print(f"試行回数 : {sim_count}、当たりの回数 : {car_count}")
-    print(f"当たりのドア : {car}、最初の選択 : {player}、モンティの選択 : {monty_choice}")
+    while True:
+        if sim_count != num:
+            door = [1, 2, 3] # ドア3つ
+            car = random.choice(door) # 当たりのドアをランダム
+            player = random.choice(door) # プレイヤーが選ぶドアをランダム
+            if car == player: # はじめに正解の場合
+                door.remove(car) # 当たりのドアを外して、
+                monty_choice = random.choice(door) # ハズレのドアを選ぶ
+                if y_or_n == "y":
+                    judge = "はずれ"
+                elif y_or_n == "n":
+                    car_count += 1 # 正解で当たりのカウントを+1
+                    judge = "あたり"
+            else: # はじめに不正解の場合
+                door.remove(car) # 当たりのドアを外して、
+                door.remove(player) # プレイヤーの選択したドアも外す
+                monty_choice = random.choice(door) # ハズレのドアを選ぶ
+                if y_or_n == "y":
+                    car_count += 1 # 正解で当たりのカウントを+1
+                    judge = "あたり"
+                elif y_or_n == "n":
+                    judge = "はずれ"
+            sim_count += 1
+            print(f"試行No{sim_count}、判定 : {judge}")
+        else:
+            car_prob = 100 * car_count / sim_count # あたりの確率
+            print(f"試行回数 : {sim_count}、あたり : {car_count}、あたり確率 : {car_prob:3f}")
+            break
 
 sim = sim_choice()
 monty(sim[0], sim[1])
