@@ -40,5 +40,8 @@ def monty(num, y_or_n):
         elif y_or_n == "n":
             pass # 不正解でパス
     sim_count += 1
+    print(f"試行回数 : {sim_count}、当たりの回数 : {car_count}")
+    print(f"当たりのドア : {car}、最初の選択 : {player}、モンティの選択 : {monty_choice}")
 
-sim_choice()
+sim = sim_choice()
+monty(sim[0], sim[1])
