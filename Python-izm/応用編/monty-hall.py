@@ -49,10 +49,10 @@ def monty(num, y_or_n):
                 elif y_or_n == "n":
                     judge = "はずれ"
             sim_count += 1
-            print(f"試行No{sim_count}、判定 : {judge}")
+            # print(f"試行No{sim_count}、判定 : {judge}")
         else:
             car_prob = 100 * car_count / sim_count # あたりの確率
-            print(f"試行回数 : {sim_count}、あたり : {car_count}、あたり確率 : {car_prob:3f}")
+            print(f"試行回数 : {sim_count}回中、あたり : {car_count}回、あたり確率 : {car_prob:3f}%")
             break
 
 sim = sim_choice()
