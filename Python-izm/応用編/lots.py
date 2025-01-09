@@ -12,16 +12,15 @@ win_count= 0 # あたりの回数
 prog_num = 0 # 10回判定のプログラムの試行回数
 prog_win_num = 0 # 10回判定のプログラムのあたり回数
 
-# 10回繰り返す
 while True:
-    if prog_num == 10:
+    if prog_num == 100:
         break
-    else: # くじを引く
+    else: # prog_num回に到達するまでくじを引く
         while True:
-            if lot_num == 10:
-                prog_num += 1
+            if lot_num == 10: # 10回引いたら、くじを引かずに試行回数+1
+                prog_num += 1 # 10回判定の試行回数を+1
                 break
-            else:
+            else: # lotを10回引く
                 your_lot = random.choice(lot)
                 lot_num += 1
                 if your_lot == "〇":
@@ -30,12 +29,15 @@ while True:
                 else:
                     # print(f"{lot_num}回目、{your_lot}, はずれ")
                     pass
-        if prog_win_num == 0:
-            print("あたりなし")
+        if win_count == 0:
+            # print("あたりなし")
+            pass
         else:
-            print(f"{prog_win_num}回目にあたり")
+            # print(f"{prog_win_num}回目にあたり")
             prog_win_num += 1
         lot_num = 0
         win_count= 0
 print("試行回数", prog_num)
 print("あたり回数", prog_win_num)
+prob = 100 * prog_win_num / prog_num
+print(f"確率 : {prob}%")
