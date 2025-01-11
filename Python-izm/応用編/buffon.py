@@ -5,35 +5,22 @@
 import random
 import math
 
-def t_input():
-    while True:
-        t_str = input("間隔 t =") # 間隔
-        try:
-            t_flo = float(t_str) # floatで設定
-            return t_flo
-            break
-        except ValueError:
-            print("数字を入力してください")
+class input_para:
+    def __init__(self, t_val = 0, l_val = 0, n_val = 0):
+        self.t_val = t_val
+        self.l_val = l_val
+        self.n_val = n_val
 
-def l_input():
-    while True:
-        l_str = input("針の長さ l =") # 長さ
-        try:
-            l_flo = float(l_str) # floatで設定
-            return l_flo
-            break
-        except ValueError:
-            print("数字を入力してください")
-
-def n_input():
-    while True:
-        n_str = input("試行回数 N =") # 試行回数
-        try:
-            n_int = int(n_str) # intで設定
-            return n_int
-            break
-        except ValueError:
-            print("数字を入力してください")
+        def inp_val(self, p_type = "", val_type = float):
+            while True:
+                para_str = input(f"{p_type}を入力 : ")
+                try:
+                    para_tc = val_type(para_str)
+                    return para_tc
+                except ValueError:
+                    print("数字を入力してください")
+                else:
+                    break
 
 num = 0 # 試行回数の設定
 hit = 0 # あたり回数の設定
