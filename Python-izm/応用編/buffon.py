@@ -11,16 +11,16 @@ class input_para:
         self.l_val = l_val
         self.n_val = n_val
 
-        def inp_val(self, p_type = "", val_type = float):
-            while True:
-                para_str = input(f"{p_type}を入力 : ")
-                try:
-                    para_tc = val_type(para_str)
-                    return para_tc
-                except ValueError:
-                    print("数字を入力してください")
-                else:
-                    break
+    def inp_val(self, p_type = "", val_type = float):
+        while True:
+            para_str = input(f"{p_type}を入力 : ")
+            try:
+                para_tc = val_type(para_str)
+                return para_tc
+            except ValueError:
+                print("数字を入力してください")
+            else:
+                break
 
 class Needle:
     def __init__(self, n_len = 1, x_lim = 1, y_lim = 1, x_posi = 0, y_posi = 0, theta = 0):
@@ -50,3 +50,22 @@ class Needle:
 
 num = 0 # 試行回数の設定
 hit = 0 # あたり回数の設定
+para = input_para()
+para.t_val = para.inp_val("間隔 t ", float)
+para.l_val = para.inp_val("針の長さ l ", float)
+para.n_val = para.inp_val("試行回数 n ", int)
+print(f"間隔t :{para.t_val}, 針の長さl : {para.l_val}, 試行回数n : {para.n_val}")
+limit = 3*para.t_val #ｘとyの最大値は3t
+needle = Needle(n_len = para.l_val, x_lim = limit, y_lim = limit)
+print(f"初期x {needle.x_posi}")
+print(f"初期y {needle.y_posi}")
+print(f"初期θ {needle.theta}")
+needle.throw() # 針を投げてx, y, θを再設定
+print(f"投げ後x {needle.x_posi}")
+print(f"投げ後y {needle.y_posi}")
+print(f"投げ後θ {needle.theta}")
+print(needle.endpoint("x"))
+print(needle.endpoint("y"))
+# 三平方の定理から針の長さを計算
+hd_len_2 = (needle.x_posi - needle.endpoint("x")) ** 2 + (needle.y_posi - needle.endpoint("y")) ** 2
+print(f"計算針長 {math.sqrt(hd_len_2)}")
