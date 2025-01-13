@@ -48,6 +48,19 @@ class Needle:
         else:
             return "error"
 
+    def y_change(self, t_val, ep = ""):
+        y_2 = self.y_posi # y_2にy_posi代入
+        while True:
+            if y_2 <= t_val: # y_2が間隔t以下
+                break
+            else:  # y_2が間隔tより大きい
+                y_2 -= t_val # y_2から tを引く
+        y_2_ep = y_2 + self.n_len * math.sin(math.radians(self.theta))
+        if ep == "ep":
+            return y_2_ep #ｙ変更後の終点
+        else:
+            return y_2 #y変更後のy
+
 num = 0 # 試行回数の設定
 hit = 0 # あたり回数の設定
 para = input_para()
@@ -55,7 +68,7 @@ para.t_val = para.inp_val("間隔 t ", float)
 para.l_val = para.inp_val("針の長さ l ", float)
 para.n_val = para.inp_val("試行回数 n ", int)
 print(f"間隔t :{para.t_val}, 針の長さl : {para.l_val}, 試行回数n : {para.n_val}")
-limit = 3*para.t_val #ｘとyの最大値は3t
+limit = 3 * para.t_val #ｘとyの最大値は3t
 needle = Needle(n_len = para.l_val, x_lim = limit, y_lim = limit)
 print(f"初期x {needle.x_posi}")
 print(f"初期y {needle.y_posi}")
