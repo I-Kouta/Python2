@@ -61,24 +61,35 @@ class Needle:
         else:
             return y_2 #y変更後のy
 
-num = 0 # 試行回数の設定
-hit = 0 # あたり回数の設定
+def buffon_main(t_val, l_val, n_val):
+    num = 0 # 試行回数の設定
+    hit = 0 # あたり回数の設定
+    limit = 3 * t_val # ｘとyの最大値は 3t
+    while num < n_val: # 試行回数 < 目標試行回数
+        needle = Needle(n_len = l_val, x_lim = limit, y_lim = limit) # 針の設定
+        needle.throw() # 針を投げる = x, y, θの再設定
+        if needle.theta <= 180: # θ <= 180
+            if needle.y_change(t_val, "ep") >= t_val:
+                hit += 1 # 交差カウント +1
+            else:
+                pass
+        else: # θ > 180
+            if needle.y_change(t_val, "ep") <= 0:
+                hit += 1 # 交差カウント +1
+            else:
+                pass
+        y_2 = needle.y_change(t_val, "ep")
+        num += 1
+    print(f"試行回数：{num}")
+    print(f"交差本数：{hit}")
+    prob = hit / num # 交差する確率
+    print(f"交差する確率 P = 2l/t(pi) = {prob}")
+    pi = 2 * l_val / (t_val * prob) # pi = 2*l/(t*prob)
+    print(f"円周率 : {pi}")
+
 para = input_para()
 para.t_val = para.inp_val("間隔 t ", float)
 para.l_val = para.inp_val("針の長さ l ", float)
 para.n_val = para.inp_val("試行回数 n ", int)
 print(f"間隔t :{para.t_val}, 針の長さl : {para.l_val}, 試行回数n : {para.n_val}")
-limit = 3 * para.t_val #ｘとyの最大値は3t
-needle = Needle(n_len = para.l_val, x_lim = limit, y_lim = limit)
-print(f"初期x {needle.x_posi}")
-print(f"初期y {needle.y_posi}")
-print(f"初期θ {needle.theta}")
-needle.throw() # 針を投げてx, y, θを再設定
-print(f"投げ後x {needle.x_posi}")
-print(f"投げ後y {needle.y_posi}")
-print(f"投げ後θ {needle.theta}")
-print(needle.endpoint("x"))
-print(needle.endpoint("y"))
-# 三平方の定理から針の長さを計算
-hd_len_2 = (needle.x_posi - needle.endpoint("x")) ** 2 + (needle.y_posi - needle.endpoint("y")) ** 2
-print(f"計算針長 {math.sqrt(hd_len_2)}")
+buffon_main(para.t_val, para.l_val, para.n_val) # t(平行線の間隔) > l(針の長さ)だと良い
