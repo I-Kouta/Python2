@@ -153,3 +153,15 @@ sentenceA = ["a", "p", "p", "l", "e"]
 sentenceB = ["a", "p", "r", "i", "l"]
 result = simRatio(sentenceA, sentenceB)
 print(result)
+print("=====")
+
+# 再帰的に手続きされたproc
+def proc(n):
+    if n == 0:
+        n += 1
+    else:
+        print(n)
+        proc(n - 1)
+        print(n)
+
+proc(5)
