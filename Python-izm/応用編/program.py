@@ -11,7 +11,18 @@ for x in range(1, a + 1):
 
 print("===")
 # 3桁とも素数で、2乗すると5桁とも素数となるもの
+def is_nice(n, target_len):
+    b = str(n)
+    if len(b) != target_len: # 桁数が条件を満たしていない場合
+        return False
+    for i in b:
+        if i != "2" and i != "3" and i != "5" and i != "7": # 2, 3, 5, 7以外の数字が含まれている場合
+            return False
+    return True
 
+for n in range(100, 1000):
+    if is_nice(n, 3) and is_nice(n * n, 5):
+        print(f"{n}を2乗すると{n ** 2}になる")
 
 print("===")
 # 97, 100, 103で割った余りがそれぞれ32, 33, 34の正の整数のうち最小のもの
