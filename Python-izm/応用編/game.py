@@ -2,6 +2,8 @@
 # ゲーム理論
 # python game.py
 
+import random
+
 # 利得表を辞書で表現
 payoff_matrix = {
     ("黙秘", "黙秘") : (0, 0),
@@ -13,3 +15,12 @@ payoff_matrix = {
 print(f'どちらも自白の場合：{payoff_matrix[("自白", "自白")]}')
 print(f'片方が自白の場合：{payoff_matrix[("黙秘", "自白")]}, {payoff_matrix[("自白", "黙秘")]}')
 print(f'どちらも黙秘の場合：{payoff_matrix[("黙秘", "黙秘")]}')
+
+def always_silent(): # 常に黙秘する
+    return "黙秘"
+
+def always_betray(): # 常に自白する
+    return "自白"
+
+def random_choice(): # ランダムに選択する
+    return random.choice(["黙秘", "自白"])
