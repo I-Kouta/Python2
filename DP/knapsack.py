@@ -24,8 +24,8 @@ def unbounded_knapsack(capacity, weights, values, n):
     return max_value
 
 # アイテムの重さと価値
-weights = [5, 12, 15, 20, 21]
 values = [3, 10, 13, 18, 20]
+weights = [5, 12, 15, 20, 21]
 
 """
 金 価値:18 サイズ:20
@@ -36,7 +36,7 @@ values = [3, 10, 13, 18, 20]
 """
 
 # ナップサックの容量
-capacity = 50
+capacity = 100
 
 # アイテムの数
 n = len(values)
@@ -54,5 +54,4 @@ end_time = time.time()
 exec_time = end_time - start_time
 
 # 実行時間を計算
-print(f"ナップサック最大価値: {max_value}")
-print(f"実行時間: {exec_time:.6f} 秒")
+print(f"ナップサック最大価値: {max_value}, 実行時間: {exec_time:.6f} 秒")
