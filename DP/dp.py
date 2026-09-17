@@ -10,19 +10,19 @@ def fib(n):
         return 0
     if n == 1:
         return 1
-    return fib(n-1) + fib(n-2)
+    return fib(n - 1) + fib(n - 2)
 print(fib(10))
 
 # DPあり フィボナッチ数列
-def fib_DP(n, memo={}):
+def fib_DP(n, memo = {}):
     if n in memo: # 部分問題の解をメモしておく
         return memo[n]
-    if(n==0):
+    if(n == 0):
         return 0 #F(0)=0
-    if(n==1):
+    if(n == 1):
         return 1 #F(1)=1
 
-    memo[n]=fib_DP(n-1, memo) + fib_DP(n-2, memo)
+    memo[n] = fib_DP(n - 1, memo) + fib_DP(n - 2, memo)
     return memo[n]
 print(fib_DP(10))
 
