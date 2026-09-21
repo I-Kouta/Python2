@@ -33,7 +33,7 @@ class KMeans2D():
 
     def predict(self, X):
         # ラベルの変動がなくなるまで繰り返す
-        while (not(self.labels_ == self.old_labels).all() ):
+        while (not(self.labels_ == self.old_labels).all()):
             for i in range(self.n_clusters):
                 X_clusterd = X[self.labels_ == i, :] # ラベルに応じたXを抜き出す
 
@@ -67,9 +67,9 @@ km = KMeans2D(k = 3)
 labels = km.predict(X)
 
 # 分類結果の描画
-plt.scatter(X[labels == 0, 0], X[labels == 0, 1], s = 30, c='yellow', marker='o', label='cluster 1')
-plt.scatter(X[labels == 1, 0], X[labels == 1, 1], s = 30, c='lightblue', marker='o', label='cluster 2')
-plt.scatter(X[labels == 2, 0], X[labels == 2, 1], s = 30, c='lightgreen', marker='o', label='cluster 3')
+plt.scatter(X[labels == 0, 0], X[labels == 0, 1], s = 30, c="yellow", marker="o", label="cluster 1")
+plt.scatter(X[labels == 1, 0], X[labels == 1, 1], s = 30, c="lightblue", marker="o", label="cluster 2")
+plt.scatter(X[labels == 2, 0], X[labels == 2, 1], s = 30, c="lightgreen", marker="o", label="cluster 3")
 
 plt.legend()
 plt.grid()
